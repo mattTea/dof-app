@@ -23,6 +23,11 @@ module.exports = {
     root: __dirname,
     alias: {
       Main: 'app/components/Main.jsx',
+      NavHeader: 'app/components/NavHeader.jsx',
+      Gigs: 'app/components/Gigs.jsx',
+      GigList: 'app/components/GigList.jsx',
+      GigSearch: 'app/components/GigSearch.jsx',
+      ticketmaster: 'app/api/ticketmaster.jsx',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']

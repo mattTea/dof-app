@@ -1,16 +1,16 @@
 var React = require('react');
+var NavHeader = require('NavHeader');
 
-var Main = (props) => {
-  return (
-    <div>
+var Main = React.createClass({
+  render: function () {
+    return (
       <div>
-        <div>
-          <p>Main.jsx Rendered</p>
-          {props.children}
-        </div>
+        <NavHeader/>
+        <h2>Main Component</h2>
+        {this.props.children}
       </div>
-    </div>
-  );
-}
+    );
+  }
+});
 
 module.exports = Main;
