@@ -14,6 +14,7 @@ require('style!css!sass!applicationStyles'); //applicationStyles module loaded u
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
+      <IndexRoute component={Gigs}/> {/* this renders if neither of the above routes are matched */}
     </Route>
   </Router>,
   document.getElementById('app')

@@ -33,7 +33,41 @@ var Gigs = React.createClass({
       if (isLoading) {
         return <h3 className="text-center">Getting gigs...</h3>;
       } else if (gigs) {
-        return <GigList/>;
+
+        var tinyGigs = [];
+
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0!
+        var yyyy = today.getFullYear();
+        if(dd < 10) {
+            dd = '0' + dd
+        }
+        if(mm < 10) {
+            mm = '0' + mm
+        }
+        var todayFormat = yyyy + '-' + mm + '-' + dd;
+
+        console.log('gigs._embedded.events.length: ' + gigs._embedded.events.length);
+
+        for (var i = 0; i < gigs._embedded.events.length; i++) {
+          if (gigs._embedded.events[i].dates.start.localDate === todayFormat) {
+            tinyGigs.push(gigs._embedded.events[i])
+          }
+        }
+
+        console.log('tinyGigs.length: ' + tinyGigs.length);
+        console.log(tinyGigs);
+
+        // TODOs
+        // build a table of tinyGigs data so we can return that below
+        // handle when there are 0 gigs in tinyGigs
+
+        return (
+          <div>
+            <GigList gigs={tinyGigs[0].name + ' at ' + tinyGigs[0]._embedded.venues[0].name}/>
+          </div>
+        )
       }
     }
 
