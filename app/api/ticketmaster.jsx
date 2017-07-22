@@ -13,8 +13,8 @@ if(mm < 10) {
     mm = '0' + mm
 }
 
-var afterDate = yyyy + '-' + mm + '-' + (dd - 1) + 'T18:00:00Z'
-var beforeDate = yyyy + '-' + mm + '-' + (dd + 1) + 'T18:00:00Z'
+var afterDate = yyyy + '-' + mm + '-' + (dd - 2) + 'T12:00:00Z'
+var beforeDate = yyyy + '-' + mm + '-' + (dd + 2) + 'T12:00:00Z'
 
 const TICKETMASTER_URL = 'https://app.ticketmaster.com/discovery/v2/events.json?apikey=IHG9ubdkcGYkGDyAaNAmnUe9X3709P3h&countryCode=GB&city=London&size=199&venueId=' + tinyVenues + '&startDateTime=' + afterDate + '&endDateTime=' + beforeDate;
 

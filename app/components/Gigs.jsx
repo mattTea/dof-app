@@ -62,6 +62,25 @@ var Gigs = React.createClass({
         // TODOs
         // build a table of tinyGigs data so we can return that below
         // handle when there are 0 gigs in tinyGigs
+        // remove o2 from venue list
+
+//----------Current WIP------------
+
+        // var listOfGigs;
+        //
+        // if (tinyGigs.length = 0) {
+        //   return <h4 className="text-center">Sad times, there are no tiny gigs tonight.</h4>;
+        // } else {
+        //   for (var i = 0; i < tinyGigs.length; i++) {
+        //     // listOfGigs = create line for tinyGigs[i].name + ' at ' + tinyGigs[i]._embedded.venues[0].name
+        //
+        //   }
+        // }
+        // console.log(listOfGigs);
+
+        // with listOfGigs updated then change below to <GigList gigs={listOfGigs}/>
+
+//----------WIP end------------
 
         return (
           <div>
@@ -74,6 +93,7 @@ var Gigs = React.createClass({
     return (
       <div>
         <h1 className="text-center page-title">Get Gigs</h1>
+        <h5 className="text-center">For those who prefer their drinks in a glass and their bands close.</h5>
         <GigSearch onSearch={this.handleSearch}/>
         {renderGigList()}
       </div>
