@@ -62,8 +62,8 @@ var GigList = React.createClass({
     }
 
     return (
-      <div className="text-center">
-        <h4>Today's tiny gigs...</h4>
+      <div className="text-left">
+        <h4 id="list-header">Today's tiny gigs...</h4>
         <div>
           {displayGigList.split("\n").map(i => {
             return <div>{i}</div>;
