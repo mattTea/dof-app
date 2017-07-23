@@ -33,58 +33,9 @@ var Gigs = React.createClass({
       if (isLoading) {
         return <h3 className="text-center">Getting gigs...</h3>;
       } else if (gigs) {
-
-        var tinyGigs = [];
-
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth()+1; //January is 0!
-        var yyyy = today.getFullYear();
-        if(dd < 10) {
-            dd = '0' + dd
-        }
-        if(mm < 10) {
-            mm = '0' + mm
-        }
-        var todayFormat = yyyy + '-' + mm + '-' + dd;
-
-        console.log('gigs._embedded.events.length: ' + gigs._embedded.events.length);
-
-        for (var i = 0; i < gigs._embedded.events.length; i++) {
-          if (gigs._embedded.events[i].dates.start.localDate === todayFormat) {
-            tinyGigs.push(gigs._embedded.events[i])
-          }
-        }
-
-        console.log('tinyGigs.length: ' + tinyGigs.length);
-        console.log(tinyGigs);
-
-        // TODOs
-        // build a table of tinyGigs data so we can return that below
-        // handle when there are 0 gigs in tinyGigs
-        // remove o2 from venue list
-
-//----------Current WIP------------
-
-        // var listOfGigs;
-        //
-        // if (tinyGigs.length = 0) {
-        //   return <h4 className="text-center">Sad times, there are no tiny gigs tonight.</h4>;
-        // } else {
-        //   for (var i = 0; i < tinyGigs.length; i++) {
-        //     // listOfGigs = create line for tinyGigs[i].name + ' at ' + tinyGigs[i]._embedded.venues[0].name
-        //
-        //   }
-        // }
-        // console.log(listOfGigs);
-
-        // with listOfGigs updated then change below to <GigList gigs={listOfGigs}/>
-
-//----------WIP end------------
-
         return (
           <div>
-            <GigList gigs={tinyGigs[0].name + ' at ' + tinyGigs[0]._embedded.venues[0].name}/>
+            <GigList gigs={gigs}/>
           </div>
         )
       }
@@ -92,8 +43,8 @@ var Gigs = React.createClass({
 
     return (
       <div>
-        <h1 className="text-center page-title">Get Gigs</h1>
-        <h5 className="text-center">For those who prefer their drinks in a glass and their bands close.</h5>
+        <h1 className="text-center page-title">Feeling intimate?</h1>
+        <h5 className="text-center">For those who prefer their bands close<br/>and their drinks in a glass.</h5>
         <GigSearch onSearch={this.handleSearch}/>
         {renderGigList()}
       </div>

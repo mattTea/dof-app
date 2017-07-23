@@ -12,7 +12,7 @@ var GigSearch = React.createClass({
     return (
       <div>
         <form onSubmit={this.onFormSubmit}>
-          <button className="button expanded hollow">Find gigs</button>
+          <button className="button expanded hollow">Find tiny gigs</button>
         </form>
       </div>
     );
