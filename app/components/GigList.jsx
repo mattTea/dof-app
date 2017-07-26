@@ -27,7 +27,7 @@ var GigList = React.createClass({
     }
 
     console.log('tinyGigs.length: ' + tinyGigs.length);
-    console.log(JSON.stringify(tinyGigs));
+    // console.log(JSON.stringify('tinyGigs: ' + tinyGigs));
 
     var listOfGigs = [];
 
@@ -38,27 +38,41 @@ var GigList = React.createClass({
           venue: tinyGigs[i]._embedded.venues[0].name
         });
       }
-      console.log(JSON.stringify(listOfGigs));
+      console.log('listOfGigs.length: ' + listOfGigs.length);
+      // console.log(JSON.stringify('listOfGigs: ' + listOfGigs));
     } else {
       return <h5 className="text-center">Sad times, there are no tiny gigs tonight.</h5>;
     }
 
+    // filter duplicates from listOfGigs
+    var seen = {};
+    var noDupeListOfGigs = [];
+
+    for (var j = 0; j < listOfGigs.length; j++) {
+      if (!(listOfGigs[j].name.substring(0,8) in seen)) {
+        noDupeListOfGigs.push(listOfGigs[j]);
+        seen[listOfGigs[j].name.substring(0,8)] = true;
+      }
+    }
+    console.log('noDupeListOfGigs.length: ' + noDupeListOfGigs.length);
+    // console.log('noDupeListOfGigs: ' + JSON.stringify(noDupeListOfGigs));
+
     var displayGigList;
 
-    if (listOfGigs.length === 1) {
-      displayGigList = listOfGigs[0].name + ' at ' + listOfGigs[0].venue + '.';
+    if (noDupeListOfGigs.length === 1) {
+      displayGigList = noDupeListOfGigs[0].name + ' at ' + noDupeListOfGigs[0].venue + '.';
     }
-    if (listOfGigs.length === 2) {
-      displayGigList = '1. ' + listOfGigs[0].name + ' at ' + listOfGigs[0].venue + '.' + '\n' + '2. ' + listOfGigs[1].name + ' at ' + listOfGigs[1].venue + '.';
+    if (noDupeListOfGigs.length === 2) {
+      displayGigList = '1. ' + noDupeListOfGigs[0].name + ' at ' + noDupeListOfGigs[0].venue + '.' + '\n' + '2. ' + noDupeListOfGigs[1].name + ' at ' + noDupeListOfGigs[1].venue + '.';
     }
-    if (listOfGigs.length === 3) {
-      displayGigList = '1. ' + listOfGigs[0].name + ' at ' + listOfGigs[0].venue + '.' + '\n' + '2. ' + listOfGigs[1].name + ' at ' + listOfGigs[1].venue + '.' + '\n' + '3. ' + listOfGigs[2].name + ' at ' + listOfGigs[2].venue + '.';
+    if (noDupeListOfGigs.length === 3) {
+      displayGigList = '1. ' + noDupeListOfGigs[0].name + ' at ' + noDupeListOfGigs[0].venue + '.' + '\n' + '2. ' + noDupeListOfGigs[1].name + ' at ' + noDupeListOfGigs[1].venue + '.' + '\n' + '3. ' + noDupeListOfGigs[2].name + ' at ' + noDupeListOfGigs[2].venue + '.';
     }
-    if (listOfGigs.length === 4) {
-      displayGigList = '1. ' + listOfGigs[0].name + ' at ' + listOfGigs[0].venue + '.' + '\n' + '2. ' + listOfGigs[1].name + ' at ' + listOfGigs[1].venue + '.' + '\n' + '3. ' + listOfGigs[2].name + ' at ' + listOfGigs[2].venue + '.' + '\n' + '4. ' + listOfGigs[3].name + ' at ' + listOfGigs[3].venue + '.';
+    if (noDupeListOfGigs.length === 4) {
+      displayGigList = '1. ' + noDupeListOfGigs[0].name + ' at ' + noDupeListOfGigs[0].venue + '.' + '\n' + '2. ' + noDupeListOfGigs[1].name + ' at ' + noDupeListOfGigs[1].venue + '.' + '\n' + '3. ' + noDupeListOfGigs[2].name + ' at ' + noDupeListOfGigs[2].venue + '.' + '\n' + '4. ' + noDupeListOfGigs[3].name + ' at ' + noDupeListOfGigs[3].venue + '.';
     }
-    if (listOfGigs.length >= 5) {
-      displayGigList = '1. ' + listOfGigs[0].name + ' at ' + listOfGigs[0].venue + '.' + '\n' + '2. ' + listOfGigs[1].name + ' at ' + listOfGigs[1].venue + '.' + '\n' + '3. ' + listOfGigs[2].name + ' at ' + listOfGigs[2].venue + '.' + '\n' + '4. ' + listOfGigs[3].name + ' at ' + listOfGigs[3].venue + '.' + '\n' + '5. ' + listOfGigs[4].name + ' at ' + listOfGigs[4].venue + '.';
+    if (noDupeListOfGigs.length >= 5) {
+      displayGigList = '1. ' + noDupeListOfGigs[0].name + ' at ' + noDupeListOfGigs[0].venue + '.' + '\n' + '2. ' + noDupeListOfGigs[1].name + ' at ' + noDupeListOfGigs[1].venue + '.' + '\n' + '3. ' + noDupeListOfGigs[2].name + ' at ' + noDupeListOfGigs[2].venue + '.' + '\n' + '4. ' + noDupeListOfGigs[3].name + ' at ' + noDupeListOfGigs[3].venue + '.' + '\n' + '5. ' + noDupeListOfGigs[4].name + ' at ' + noDupeListOfGigs[4].venue + '.';
     }
 
     return (
