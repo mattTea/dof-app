@@ -3,7 +3,7 @@ var NavHeader = require('NavHeader');
 
 var Main = (props) => {
   return (
-    <div>
+    <div id="background">
       <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       <NavHeader/>
       <div className="row">
