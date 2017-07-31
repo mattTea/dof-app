@@ -49,9 +49,12 @@ var GigList = React.createClass({
     var noDupeListOfGigs = [];
 
     for (var j = 0; j < listOfGigs.length; j++) {
-      if (!(listOfGigs[j].name.substring(0,8) in seen)) {
+      var name = listOfGigs[j].name.substring(0,8);
+      var lowerName = name.toLowerCase();
+
+      if (!(lowerName in seen)) {
         noDupeListOfGigs.push(listOfGigs[j]);
-        seen[listOfGigs[j].name.substring(0,8)] = true;
+        seen[lowerName] = true;
       }
     }
     console.log('noDupeListOfGigs.length: ' + noDupeListOfGigs.length);
