@@ -31,7 +31,7 @@ var Gigs = React.createClass({
 
     function renderGigList () {
       if (isLoading) {
-        return <h5 className="text-center">Getting gigs...</h5>;
+        return <h5 className="text-center page-loading">Getting gigs...</h5>;
       } else if (gigs) {
         return (
           <div>
@@ -44,7 +44,7 @@ var Gigs = React.createClass({
     return (
       <div>
         <h1 className="text-center page-title">Feeling intimate?</h1>
-        <h5 className="text-center" id="blurb">For those who prefer their bands close and their drinks in a glass.</h5>
+        <h5 className="text-center page-blurb">For those who prefer their bands close and their drinks in a glass.</h5>
         <GigSearch onSearch={this.handleSearch}/>
         {renderGigList()}
       </div>
