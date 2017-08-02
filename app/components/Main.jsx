@@ -8,7 +8,7 @@ var styles = {
   backgroundSize: 'cover',
   height: '100%',
   backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat'  
+  backgroundRepeat: 'no-repeat'
 };
 
 var Main = (props) => {
@@ -17,7 +17,7 @@ var Main = (props) => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       <NavHeader/>
       <div className="row">
-        <div className="columns small-10 medium-6 large-4 small-centered">
+        <div className="columns small-10 medium-6 large-6 small-centered">
           {props.children}
         </div>
       </div>

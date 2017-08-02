@@ -44,7 +44,7 @@ var Gigs = React.createClass({
     return (
       <div>
         <h1 className="text-center page-title">Feeling intimate?</h1>
-        <h5 className="text-center page-blurb">For those who prefer their bands close and their drinks in a glass.</h5>
+        <h6 className="text-center page-blurb">For those who prefer their bands close and their drinks in a glass.</h6>
         <GigSearch onSearch={this.handleSearch}/>
         {renderGigList()}
       </div>
