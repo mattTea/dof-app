@@ -21,7 +21,8 @@ var GigList = React.createClass({
     console.log('gigs._embedded.events.length: ' + gigs._embedded.events.length);
 
     for (var i = 0; i < gigs._embedded.events.length; i++) {
-      if (gigs._embedded.events[i].dates.start.localDate === todayFormat) {
+      // if (gigs._embedded.events[i].dates.start.localDate === todayFormat) {
+      if ((gigs._embedded.events[i].dates.start.localDate === todayFormat) && (gigs._embedded.events[i].dates.status.code !== 'cancelled')) {
         tinyGigs.push(gigs._embedded.events[i])
       }
     }
@@ -58,7 +59,7 @@ var GigList = React.createClass({
       }
     }
     console.log('noDupeListOfGigs.length: ' + noDupeListOfGigs.length);
-    // console.log('noDupeListOfGigs: ' + JSON.stringify(noDupeListOfGigs));
+    console.log('noDupeListOfGigs: ' + JSON.stringify(noDupeListOfGigs));
 
     var displayGigList;
 
