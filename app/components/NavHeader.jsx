@@ -8,12 +8,13 @@ var NavHeader = (props) => {
     <div className="top-bar">
       <div className="top-bar-center show-for-small-only">
         <ul className="menu">
-          <li><img src={require('../../public/images/gtvLogo.png')} style={{maxWidth: "35px", maxHeight: "35px"}}></img></li>
-          <li className="menu-text" style={{fontSize: 11}}>Gigs in Tiny Venues</li>
+          <li><img src={require('../../public/images/CaravanGig2.png')} style={{maxWidth: "3.5em", maxHeight: "3.5em"}}></img></li>
+          <li className="menu-text" style={{fontSize: 12}}>Gigs in Tiny Venues</li>
         </ul>
       </div>
       <div className="top-bar-left show-for-medium">
         <ul className="menu">
+          <li><img src={require('../../public/images/CaravanGig2.png')} style={{maxWidth: "5em", maxHeight: "5em"}}></img></li>
           <li className="menu-text">Gigs in Tiny Venues</li>
         </ul>
       </div>
