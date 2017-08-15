@@ -1,8 +1,6 @@
 var React = require('react');
 var {Link, IndexLink} = require('react-router');
 
-// todo - make decent icon image and add to commented out url below. also make it fixed size (not responsive)
-
 var NavHeader = (props) => {
   return (
     <div className="top-bar">
