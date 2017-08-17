@@ -60,11 +60,71 @@ var GigList = React.createClass({
     console.log('noDupeListOfGigs.length: ' + noDupeListOfGigs.length);
     console.log('noDupeListOfGigs: ' + JSON.stringify(noDupeListOfGigs));
 
+    var venueHref = [
+      {venueName: 'Garage', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Union Chapel', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Birthdays', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Dublin Castle', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Lexington', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Good Ship', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Shacklewell Arms', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Windmill', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Nambucca', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Notting Hill Arts Centre', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Moth Club', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Old Blue Last', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Hoxton Square Bar & Kitchen', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Underworld Camden', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Proud Camden', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Camden Assembly (Barfly)', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'KOKO', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Dingwalls', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Dirty South', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Amersham Arms', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Bull & Gate', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Borderline', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Scala', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: "Old Queens Head", venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'XOYO', venueUrl: 'http://xoyo.co.uk/whats-on'},
+      {venueName: '100 Club', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Hope & Anchor', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Cargo', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Servant Jazz Quarters', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'St Moritz', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Lock Tavern', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Black Heart', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Purple Turtle', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Victoria', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Cafe Oto', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'The Islington', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Macbeth', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Waiting Room', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Green Note', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Lewis Cubitt Square', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'The Finsbury', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'The Sound Lounge', venueUrl: 'http://www.thesoundlounge.org.uk/'},
+      {venueName: 'Slaughtered Lamb', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Surya', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Troubadour', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'The Half Moon', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Water Rats', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'The Pickle Factory', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Corsica Studios', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Jazz Cafe', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Kamio', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'ECHOES', venueUrl: 'http://www.ticketmaster.co.uk/'},
+      {venueName: 'Omeara', venueUrl: 'http://www.ticketmaster.co.uk/'}
+    ];
+
     const listItems = noDupeListOfGigs.map((noDupeListOfGig, index) =>
       <li key={index}>
-        <a href="http://www.ticketmaster.co.uk/" target="_blank">
-          {noDupeListOfGig.name} at {noDupeListOfGig.venue}
-        </a>
+        {venueHref.map(function(venueHref, i) {
+          if (venueHref.venueName === noDupeListOfGig.venue) {
+            return <a href={venueHref.venueUrl} key={i} target="_blank">
+              {noDupeListOfGig.name} at {noDupeListOfGig.venue}
+            </a>
+          }
+        })}
       </li>
     );
 
