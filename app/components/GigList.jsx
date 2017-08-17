@@ -21,7 +21,6 @@ var GigList = React.createClass({
     console.log('gigs._embedded.events.length: ' + gigs._embedded.events.length);
 
     for (var i = 0; i < gigs._embedded.events.length; i++) {
-      // if (gigs._embedded.events[i].dates.start.localDate === todayFormat) {
       if ((gigs._embedded.events[i].dates.start.localDate === todayFormat) && (gigs._embedded.events[i].dates.status.code !== 'cancelled')) {
         tinyGigs.push(gigs._embedded.events[i])
       }
@@ -61,31 +60,19 @@ var GigList = React.createClass({
     console.log('noDupeListOfGigs.length: ' + noDupeListOfGigs.length);
     console.log('noDupeListOfGigs: ' + JSON.stringify(noDupeListOfGigs));
 
-    var displayGigList;
-
-    if (noDupeListOfGigs.length === 1) {
-      displayGigList = noDupeListOfGigs[0].name + ' at ' + noDupeListOfGigs[0].venue + '.';
-    }
-    if (noDupeListOfGigs.length === 2) {
-      displayGigList = '1. ' + noDupeListOfGigs[0].name + ' at ' + noDupeListOfGigs[0].venue + '.' + '\n' + '2. ' + noDupeListOfGigs[1].name + ' at ' + noDupeListOfGigs[1].venue + '.';
-    }
-    if (noDupeListOfGigs.length === 3) {
-      displayGigList = '1. ' + noDupeListOfGigs[0].name + ' at ' + noDupeListOfGigs[0].venue + '.' + '\n' + '2. ' + noDupeListOfGigs[1].name + ' at ' + noDupeListOfGigs[1].venue + '.' + '\n' + '3. ' + noDupeListOfGigs[2].name + ' at ' + noDupeListOfGigs[2].venue + '.';
-    }
-    if (noDupeListOfGigs.length === 4) {
-      displayGigList = '1. ' + noDupeListOfGigs[0].name + ' at ' + noDupeListOfGigs[0].venue + '.' + '\n' + '2. ' + noDupeListOfGigs[1].name + ' at ' + noDupeListOfGigs[1].venue + '.' + '\n' + '3. ' + noDupeListOfGigs[2].name + ' at ' + noDupeListOfGigs[2].venue + '.' + '\n' + '4. ' + noDupeListOfGigs[3].name + ' at ' + noDupeListOfGigs[3].venue + '.';
-    }
-    if (noDupeListOfGigs.length >= 5) {
-      displayGigList = '1. ' + noDupeListOfGigs[0].name + ' at ' + noDupeListOfGigs[0].venue + '.' + '\n' + '2. ' + noDupeListOfGigs[1].name + ' at ' + noDupeListOfGigs[1].venue + '.' + '\n' + '3. ' + noDupeListOfGigs[2].name + ' at ' + noDupeListOfGigs[2].venue + '.' + '\n' + '4. ' + noDupeListOfGigs[3].name + ' at ' + noDupeListOfGigs[3].venue + '.' + '\n' + '5. ' + noDupeListOfGigs[4].name + ' at ' + noDupeListOfGigs[4].venue + '.';
-    }
+    const listItems = noDupeListOfGigs.map((noDupeListOfGig, index) =>
+      <li key={index}>
+        <a href="http://www.ticketmaster.co.uk/" target="_blank">
+          {noDupeListOfGig.name} at {noDupeListOfGig.venue}
+        </a>
+      </li>
+    );
 
     return (
       <div className="text-left">
         <h4 id="list-header">Today's tiny gigs...</h4>
         <div id="list-body">
-          {displayGigList.split("\n").map(i => {
-            return <div>{i}</div>;
-          })}
+          <ul>{listItems}</ul>
         </div>
       </div>
     );

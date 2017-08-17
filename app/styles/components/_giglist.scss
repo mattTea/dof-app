@@ -7,4 +7,16 @@
 #list-body {
   color: white;
   padding-bottom: 5em;
+  ul {
+    list-style: decimal;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  a:hover {
+    color: #1779ba;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
 }
