@@ -8,7 +8,8 @@ var styles = {
   backgroundSize: 'cover',
   height: '100%',
   backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat'
+  backgroundRepeat: 'no-repeat',
+  backgroundAttachment: 'fixed'
 };
 
 var Main = (props) => {
