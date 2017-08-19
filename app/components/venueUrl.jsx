@@ -1,5 +1,5 @@
 var venueHref = [
-  {venueName: 'Garage', venueUrl: 'http://thegarage.london/listings/'},
+  {venueName: 'The Garage', venueUrl: 'http://thegarage.london/listings/'},
   {venueName: 'Union Chapel', venueUrl: 'https://store.unionchapel.org.uk/'},
   {venueName: 'Birthdays', venueUrl: 'http://www.birthdaysdalston.com/'},
   {venueName: 'Dublin Castle', venueUrl: 'http://thedublincastle.com/'},
