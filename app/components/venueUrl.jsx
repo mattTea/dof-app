@@ -52,7 +52,9 @@ var venueHref = [
   {venueName: 'Kamio', venueUrl: 'http://www.iamkam.io/events'},
   {venueName: 'ECHOES', venueUrl: 'http://archspace.london/'},
   {venueName: 'OMEARA', venueUrl: 'http://www.omearalondon.com/events/'},
-  {venueName: 'Omeara', venueUrl: 'http://www.omearalondon.com/events/'}
+  {venueName: 'Omeara', venueUrl: 'http://www.omearalondon.com/events/'},
+  {venueName: 'The Dome', venueUrl: 'http://www.dometufnellpark.co.uk/listings/'},
+  {venueName: 'Boston Music Room', venueUrl: 'http://www.bostonmusicroom.co.uk/all-listings/'}
 ];
 
 exports.venueHref = venueHref;
