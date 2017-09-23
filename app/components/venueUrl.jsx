@@ -51,6 +51,7 @@ var venueHref = [
   {venueName: 'Jazz Cafe', venueUrl: 'http://thejazzcafelondon.com/whats-on'},
   {venueName: 'Kamio', venueUrl: 'http://www.iamkam.io/events'},
   {venueName: 'ECHOES', venueUrl: 'http://archspace.london/'},
+  {venueName: 'OMEARA', venueUrl: 'http://www.omearalondon.com/events/'},
   {venueName: 'Omeara', venueUrl: 'http://www.omearalondon.com/events/'}
 ];
 
