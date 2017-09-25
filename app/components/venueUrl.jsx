@@ -43,7 +43,7 @@ var venueHref = [
   {venueName: 'The Sound Lounge', venueUrl: 'http://www.thesoundlounge.org.uk/'},
   {venueName: 'Slaughtered Lamb', venueUrl: 'http://slamb.glasswerk.co.uk/'},
   {venueName: 'Surya', venueUrl: 'http://www.suryalondon.com/events/'},
-  {venueName: 'Troubadour', venueUrl: 'https://troubadourlondon.yapsody.com/'},
+  {venueName: 'The Troubadour', venueUrl: 'https://troubadourlondon.yapsody.com/'},
   {venueName: 'The Half Moon', venueUrl: 'https://tickets.halfmoon.co.uk/'},
   {venueName: 'Water Rats', venueUrl: 'http://thewaterratsvenue.london/listings.html'},
   {venueName: 'The Pickle Factory', venueUrl: 'https://ovalspace.co.uk/events'},
