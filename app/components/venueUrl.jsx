@@ -54,7 +54,8 @@ var venueHref = [
   {venueName: 'OMEARA', venueUrl: 'http://www.omearalondon.com/events/'},
   {venueName: 'Omeara', venueUrl: 'http://www.omearalondon.com/events/'},
   {venueName: 'The Dome', venueUrl: 'http://www.dometufnellpark.co.uk/listings/'},
-  {venueName: 'Boston Music Room', venueUrl: 'http://www.bostonmusicroom.co.uk/all-listings/'}
+  {venueName: 'Boston Music Room', venueUrl: 'http://www.bostonmusicroom.co.uk/all-listings/'},
+  {venueName: 'Mangle E8', venueUrl: 'https://www.manglee8.com/'}
 ];
 
 exports.venueHref = venueHref;
