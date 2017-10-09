@@ -3,6 +3,7 @@ var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 var Main = require('Main');
 var Gigs = require('Gigs');
+var Plays = require('Plays');
 
 // Load foundation
 require('style!css!foundation-sites/dist/foundation.min.css');
@@ -14,6 +15,7 @@ require('style!css!sass!applicationStyles'); //applicationStyles module loaded u
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
+      <Route path="plays" component={Plays}/>
       <IndexRoute component={Gigs}/> {/* this renders if neither of the above routes are matched */}
     </Route>
   </Router>,

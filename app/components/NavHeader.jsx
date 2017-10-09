@@ -3,7 +3,7 @@ var {Link, IndexLink} = require('react-router');
 
 var NavHeader = (props) => {
   return (
-    <div className="top-bar">
+    <div className="top-bar vertical-align">
       <div className="top-bar-center show-for-small-only">
         <ul className="menu">
           <li><img src={require('../../public/images/CaravanGig2.png')} style={{maxWidth: "3.5em", maxHeight: "3.5em"}}></img></li>
@@ -14,6 +14,12 @@ var NavHeader = (props) => {
         <ul className="menu">
           <li><img src={require('../../public/images/CaravanGig2.png')} style={{maxWidth: "5em", maxHeight: "5em"}}></img></li>
           <li className="menu-text">Gigs in Tiny Venues</li>
+          <li>
+            <IndexLink to="/" activeClassName="active-link">Music</IndexLink>
+          </li>
+          <li>
+            <Link to="/plays" activeClassName="active-link">Theatre</Link>
+          </li>
         </ul>
       </div>
       <div className="top-bar-right show-for-medium">

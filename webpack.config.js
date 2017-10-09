@@ -27,7 +27,9 @@ module.exports = {
       Gigs: 'app/components/Gigs.jsx',
       GigList: 'app/components/GigList.jsx',
       GigSearch: 'app/components/GigSearch.jsx',
+      Plays: 'app/components/Plays.jsx',
       ticketmaster: 'app/api/ticketmaster.jsx',
+      ticketmasterPlays: 'app/api/ticketmasterPlays.jsx',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']
