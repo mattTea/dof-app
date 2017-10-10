@@ -1,6 +1,6 @@
 var axios = require('axios');
 
-var tinyVenues = 'KovZ9177WvV';
+var tinyVenues = 'KovZ9177WvV,KovZ9177M50,Z598xZL4Zak1F,ZFr9jZFekA,KovZpZAtFe6A,KovZ91773p0,KovZ91779sV,KovZ9177U3f';
 
 var dPlus = new Date();
 dPlus.setDate(dPlus.getDate() + 2);
@@ -46,4 +46,11 @@ module.exports = {
 /*
 Venues:
 KovZ9177WvV   Hampstead Theatre
+KovZ9177M50   Menier Chocolate Factory
+Z598xZL4Zak1F Menier Chocolate Factory
+ZFr9jZFekA    Almeida Theatre - London
+KovZpZAtFe6A  Battersea Arts Centre
+KovZ91773p0   King's Head Theatre
+KovZ91779sV   Arcola Theatre
+KovZ9177U3f   Lyric Theatre (for test purposes)
 */

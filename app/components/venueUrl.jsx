@@ -47,7 +47,7 @@ var venueHref = [
   {venueName: 'The Half Moon', venueUrl: 'https://tickets.halfmoon.co.uk/'},
   {venueName: 'Water Rats', venueUrl: 'http://thewaterratsvenue.london/listings.html'},
   {venueName: 'The Pickle Factory', venueUrl: 'https://ovalspace.co.uk/events'},
-  {venueName: 'Corsica Studios', venueUrl: 'hhttp://www.corsicastudios.com/whats-on/'},
+  {venueName: 'Corsica Studios', venueUrl: 'http://www.corsicastudios.com/whats-on/'},
   {venueName: 'Jazz Cafe', venueUrl: 'http://thejazzcafelondon.com/whats-on'},
   {venueName: 'Kamio', venueUrl: 'http://www.iamkam.io/events'},
   {venueName: 'ECHOES', venueUrl: 'http://archspace.london/'},
@@ -55,7 +55,9 @@ var venueHref = [
   {venueName: 'Omeara', venueUrl: 'http://www.omearalondon.com/events/'},
   {venueName: 'The Dome', venueUrl: 'http://www.dometufnellpark.co.uk/listings/'},
   {venueName: 'Boston Music Room', venueUrl: 'http://www.bostonmusicroom.co.uk/all-listings/'},
-  {venueName: 'Mangle E8', venueUrl: 'https://www.manglee8.com/'}
+  {venueName: 'Mangle E8', venueUrl: 'https://www.manglee8.com/'},
+  {venueName: 'Arcola Theatre', venueUrl: 'https://www.arcolatheatre.com/events/'},
+  {venueName: 'Lyric Theatre', venueUrl: 'https://www.nimaxtheatres.com/shows/'} // TEST
 ];
 
 exports.venueHref = venueHref;

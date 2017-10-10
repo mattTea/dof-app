@@ -4,9 +4,14 @@
 
 .vertical-align {
   display: flex;
-  // justify-content: center;
   justify-content: space-between;
   align-items: center;
+}
+
+.top-bar-right {
+  text-align: right;
+  position: fixed;
+  right: 5%;
 }
 
 .top-bar {

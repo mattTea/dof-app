@@ -65,12 +65,12 @@ var GigList = React.createClass({
 
       var venueHref = require('./venueUrl.jsx').venueHref;
 
-      const listItems = noDupeListOfGigs.map((noDupeListOfGig, index) =>
+      const listItems = noDupeListOfGigs.map((noDupeListOfGigs, index) =>
         <li key={index}>
           {venueHref.map(function(venueHref, i) {
-            if (venueHref.venueName === noDupeListOfGig.venue) {
+            if (venueHref.venueName === noDupeListOfGigs.venue) {
               return <a href={venueHref.venueUrl} key={i} target="_blank">
-                {noDupeListOfGig.name} at {noDupeListOfGig.venue}
+                {noDupeListOfGigs.name} at {noDupeListOfGigs.venue}
               </a>
             }
           })}

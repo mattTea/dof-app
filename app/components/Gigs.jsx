@@ -7,6 +7,7 @@ var Gigs = React.createClass({
   getInitialState: function () {
     return {
       isLoading: false,
+      gigType: 'music'
     }
   },
   handleSearch: function (gigs) {
@@ -25,8 +26,7 @@ var Gigs = React.createClass({
     });
   },
   render: function () {
-    var isLoading = this.state.isLoading;
-    var gigs = this.state.gigs;
+    var {isLoading, gigType, gigs} = this.state;
     console.log('Gigs.jsx, this.state.gigs: ' + this.state.gigs);
 
     function renderGigList () {
@@ -45,7 +45,7 @@ var Gigs = React.createClass({
       <div>
         <h1 className="text-center page-title">Feeling intimate?</h1>
         <h6 className="text-center page-blurb">For those who prefer their bands close and their drinks in a glass.</h6>
-        <GigSearch onSearch={this.handleSearch}/>
+        <GigSearch onSearch={this.handleSearch} gigType={gigType}/>
         {renderGigList()}
       </div>
     );

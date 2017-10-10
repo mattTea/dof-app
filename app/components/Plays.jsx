@@ -7,6 +7,7 @@ var Plays = React.createClass({
   getInitialState: function () {
     return {
       isLoading: false,
+      gigType: 'theatre'
     }
   },
   handleSearch: function (gigs) {
@@ -25,13 +26,12 @@ var Plays = React.createClass({
     });
   },
   render: function () {
-    var isLoading = this.state.isLoading;
-    var gigs = this.state.gigs;
+    var {isLoading, gigType, gigs} = this.state;
     console.log('Gigs.jsx, this.state.gigs: ' + this.state.gigs);
 
     function renderGigList () {
       if (isLoading) {
-        return <h5 className="text-center page-loading">Getting gigs...</h5>;
+        return <h5 className="text-center page-loading">Getting plays...</h5>;
       } else if (gigs) {
         return (
           <div>
@@ -44,13 +44,12 @@ var Plays = React.createClass({
     return (
       <div>
         <h1 className="text-center page-title">Feeling intimate?</h1>
-        <h6 className="text-center page-blurb">For those who prefer their players close and their drinks in a glass.</h6>
-        <GigSearch onSearch={this.handleSearch}/>
+        <h6 className="text-center page-blurb">For those who prefer their players close and their theatre fringe.</h6>
+        <GigSearch onSearch={this.handleSearch} gigType={gigType}/>
         {renderGigList()}
       </div>
     );
   }
-
 });
 
 module.exports = Plays;
