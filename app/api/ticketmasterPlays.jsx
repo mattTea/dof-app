@@ -1,6 +1,6 @@
 var axios = require('axios');
 
-var tinyVenues = 'KovZ9177WvV,KovZ9177M50,Z598xZL4Zak1F,ZFr9jZFekA,KovZpZAtFe6A,KovZ91773p0,KovZ91779sV,KovZ9177U3f';
+var tinyVenues = 'KovZ9177U3f,KovZ9177WvV,KovZ9177M50,Z598xZL4Zak1F,ZFr9jZFekA,KovZpZAtFe6A,KovZ91773p0,KovZ91779sV,KovZpZAt6kkA,KovZpZAt6kkA';
 
 var dPlus = new Date();
 dPlus.setDate(dPlus.getDate() + 2);
@@ -30,9 +30,14 @@ var afterDate = yNeg2 + '-' + mNeg2 + '-' + dNeg2 + 'T12:00:00Z'
 
 const TICKETMASTER_URL = 'https://app.ticketmaster.com/discovery/v2/events.json?apikey=IHG9ubdkcGYkGDyAaNAmnUe9X3709P3h&countryCode=GB&city=London&size=199&venueId=' + tinyVenues + '&startDateTime=' + afterDate + '&endDateTime=' + beforeDate;
 
+// startDateTime: Filter events with a start date after this date (afterDate variable)
+// endDateTime: Filter events with a start date before this date
+// I need to add a range of startDateTimes to TM URL so they are no specific
+
 module.exports = {
   getGigs: function (gigs) {
     var requestUrl = `${TICKETMASTER_URL}`;
+    console.log(requestUrl);
 
     return axios.get(requestUrl).then(function (res) {
       console.log(res.data);
@@ -45,6 +50,7 @@ module.exports = {
 
 /*
 Venues:
+KovZ9177U3f   Lyric Theatre (for test purposes)
 KovZ9177WvV   Hampstead Theatre
 KovZ9177M50   Menier Chocolate Factory
 Z598xZL4Zak1F Menier Chocolate Factory
@@ -52,5 +58,6 @@ ZFr9jZFekA    Almeida Theatre - London
 KovZpZAtFe6A  Battersea Arts Centre
 KovZ91773p0   King's Head Theatre
 KovZ91779sV   Arcola Theatre
-KovZ9177U3f   Lyric Theatre (for test purposes)
+KovZpZAt6kkA  Old Red Lion Theatre
+KovZpZAntFFA  Old Red Lion Theatre
 */

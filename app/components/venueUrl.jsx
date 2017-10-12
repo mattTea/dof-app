@@ -57,6 +57,7 @@ var venueHref = [
   {venueName: 'Boston Music Room', venueUrl: 'http://www.bostonmusicroom.co.uk/all-listings/'},
   {venueName: 'Mangle E8', venueUrl: 'https://www.manglee8.com/'},
   {venueName: 'Arcola Theatre', venueUrl: 'https://www.arcolatheatre.com/events/'},
+  {venueName: 'Old Red Lion Theatre', venueUrl: 'http://www.oldredliontheatre.co.uk/shows.html'},
   {venueName: 'Lyric Theatre', venueUrl: 'https://www.nimaxtheatres.com/shows/'} // TEST
 ];
 
