@@ -3,7 +3,7 @@ var axios = require('axios');
 var tinyVenues = 'KovZ9177WvV,KovZ9177M50,Z598xZL4Zak1F,ZFr9jZFekA,KovZpZAtFe6A,KovZ91773p0,KovZ91779sV,KovZpZAt6kkA,KovZpZAt6kkA';
 
 var dPlus = new Date();
-dPlus.setDate(dPlus.getDate() + 2);
+dPlus.setDate(dPlus.getDate() + 30);
 var d2 = dPlus.getDate();
 var m2 = dPlus.getMonth()+1; //January is 0!
 var yyy2 = dPlus.getFullYear();
@@ -16,7 +16,7 @@ if(m2 < 10) {
 var beforeDate = yyy2 + '-' + m2 + '-' + d2 + 'T12:00:00Z'
 
 var dNeg = new Date();
-dNeg.setDate(dNeg.getDate() - 2);
+dNeg.setDate(dNeg.getDate() - 30);
 var dNeg2 = dNeg.getDate();
 var mNeg2 = dNeg.getMonth()+1; //January is 0!
 var yNeg2 = dNeg.getFullYear();

@@ -22,12 +22,13 @@ var GigList = React.createClass({
       return <h5 className="text-center no-gigs">Sad times, there are no tiny gigs tonight.</h5>;
     } else {
       console.log('gigs._embedded.events.length: ' + gigs._embedded.events.length);
-      // console.log('gigs._embedded.events: ' + JSON.stringify(gigs._embedded.events));
+      console.log('gigs._embedded.events: ' + JSON.stringify(gigs._embedded.events));
 
       // bug in api call - if calling specific Old Lion id returns many events with matching start date, if calling full url only returns one that doesn't match start date below
       // looks like I need to add a range of startDateTimes to TM URL so they are no specific
       for (var i = 0; i < gigs._embedded.events.length; i++) {
-        if ((gigs._embedded.events[i].dates.start.localDate === todayFormat) && (gigs._embedded.events[i].dates.status.code !== 'cancelled')) {
+        // if ((gigs._embedded.events[i].dates.start.localDate === todayFormat) && (gigs._embedded.events[i].dates.status.code !== 'cancelled')) {
+        if ((gigs._embedded.events[i].dates.start.localDate <= todayFormat) && (gigs._embedded.events[i].sales.public.endDateTime >= todayFormat) && (gigs._embedded.events[i].dates.status.code !== 'cancelled')) {
           tinyGigs.push(gigs._embedded.events[i])
         }
       }
