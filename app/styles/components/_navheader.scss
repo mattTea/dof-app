@@ -8,10 +8,18 @@
   align-items: center;
 }
 
+.vertical-align {
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
 .top-bar-right {
   text-align: right;
-  position: fixed;
-  right: 5%;
 }
 
 .top-bar {
