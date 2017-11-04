@@ -1,6 +1,6 @@
 var axios = require('axios');
 
-var tinyVenues = 'KovZ9177U3f,KovZ9177WvV,KovZ9177M50,Z598xZL4Zak1F,ZFr9jZFekA,KovZpZAtFe6A,KovZ91773p0,KovZ91779sV,KovZpZAt6kkA,KovZpZAt6kkA';
+var tinyVenues = 'KovZ9177WvV,KovZ9177M50,Z598xZL4Zak1F,ZFr9jZFekA,KovZpZAtFe6A,KovZ91773p0,KovZ91779sV,KovZpZAt6kkA,KovZpZAt6kkA';
 
 var dPlus = new Date();
 dPlus.setDate(dPlus.getDate() + 2);
@@ -50,7 +50,7 @@ module.exports = {
 
 /*
 Venues:
-KovZ9177U3f   Lyric Theatre (for test purposes)
+KovZ9177U3f   Lyric Theatre (for test purposes) - not included above
 KovZ9177WvV   Hampstead Theatre
 KovZ9177M50   Menier Chocolate Factory
 Z598xZL4Zak1F Menier Chocolate Factory

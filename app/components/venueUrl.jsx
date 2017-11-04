@@ -56,9 +56,11 @@ var venueHref = [
   {venueName: 'The Dome', venueUrl: 'http://www.dometufnellpark.co.uk/listings/'},
   {venueName: 'Boston Music Room', venueUrl: 'http://www.bostonmusicroom.co.uk/all-listings/'},
   {venueName: 'Mangle E8', venueUrl: 'https://www.manglee8.com/'},
+  {venueName: 'Archspace', venueUrl: 'http://archspace.london/'},
   {venueName: 'Arcola Theatre', venueUrl: 'https://www.arcolatheatre.com/events/'},
   {venueName: 'Old Red Lion Theatre', venueUrl: 'http://www.oldredliontheatre.co.uk/shows.html'},
-  {venueName: 'Lyric Theatre', venueUrl: 'https://www.nimaxtheatres.com/shows/'} // TEST
+  {venueName: 'Battersea Arts Centre', venueUrl: 'https://www.bac.org.uk/content_category/3262/whats_on/whats_on'}
+  // {venueName: 'Lyric Theatre', venueUrl: 'https://www.nimaxtheatres.com/shows/'} // TEST
 ];
 
 exports.venueHref = venueHref;
