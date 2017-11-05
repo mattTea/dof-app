@@ -35,7 +35,7 @@ var Gigs = React.createClass({
       } else if (gigs) {
         return (
           <div>
-            <GigList gigs={gigs}/>
+            <GigList gigs={gigs} gigType={gigType}/>
           </div>
         )
       }

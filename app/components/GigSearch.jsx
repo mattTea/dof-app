@@ -14,7 +14,7 @@ var GigSearch = React.createClass({
 
   render: function () {
     var {gigType} = this.props;
-    // console.log('gigType: ' + gigType);
+
     var renderFindGigsButton = () => {
       if (gigType === 'theatre') {
         return <button className="button expanded hollow">Find tiny plays</button>

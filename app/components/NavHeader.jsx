@@ -14,10 +14,10 @@ var NavHeader = (props) => {
             </IndexLink>
           </li>
           <li>
-            <IndexLink to="/" activeClassName="active-link" style={{fontSize: 12}}>Music</IndexLink>
+            <IndexLink to="/" activeClassName="active-link" style={{fontSize: 13, color: "white"}}>Music</IndexLink>
           </li>
           <li>
-            <Link to="/plays" activeClassName="active-link" style={{fontSize: 12}}>Theatre</Link>
+            <Link to="/plays" activeClassName="active-link" style={{fontSize: 13, color: "white"}}>Theatre</Link>
           </li>
         </ul>
       </div>

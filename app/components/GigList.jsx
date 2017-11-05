@@ -2,7 +2,7 @@ var React = require('react');
 
 var GigList = React.createClass({
   render: function () {
-    var gigs = this.props.gigs;
+    var {gigs, gigType} = this.props;
 
     var tinyGigs = [];
 
@@ -18,15 +18,14 @@ var GigList = React.createClass({
     }
     var todayFormat = yyyy + '-' + mm + '-' + dd;
 
-    if (gigs._embedded === undefined) {
+    if ((gigs._embedded === undefined) && (gigType === 'theatre')) {
+      return <h5 className="text-center no-gigs">Sad times, there are no tiny plays tonight.</h5>;
+    } else if (gigs._embedded === undefined) {
       return <h5 className="text-center no-gigs">Sad times, there are no tiny gigs tonight.</h5>;
     } else {
       console.log('gigs._embedded.events.length: ' + gigs._embedded.events.length);
-      // console.log('gigs._embedded.events: ' + JSON.stringify(gigs._embedded.events));
 
       for (var i = 0; i < gigs._embedded.events.length; i++) {
-        // if ((gigs._embedded.events[i].dates.start.localDate === todayFormat) && (gigs._embedded.events[i].dates.status.code !== 'cancelled')) {
-        // if ((gigs._embedded.events[i].dates.start.localDate <= todayFormat) && (gigs._embedded.events[i].sales.public.endDateTime >= todayFormat) && (gigs._embedded.events[i].dates.status.code !== 'cancelled')) {
         var startDate = Date.parse(gigs._embedded.events[i].dates.start.localDate);
         var gigDate = Date.parse(todayFormat);
         var endDate = Date.parse(gigs._embedded.events[i].sales.public.endDateTime)
@@ -49,6 +48,8 @@ var GigList = React.createClass({
         }
         console.log('listOfGigs.length: ' + listOfGigs.length);
         // console.log('listOfGigs: ' + JSON.stringify(listOfGigs));
+      } else if (gigType === 'theatre') {
+        return <h5 className="text-center no-gigs">Sad times, there are no tiny plays tonight.</h5>;
       } else {
         return <h5 className="text-center no-gigs">Sad times, there are no tiny gigs tonight.</h5>;
       }
