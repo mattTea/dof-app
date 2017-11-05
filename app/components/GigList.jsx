@@ -26,7 +26,11 @@ var GigList = React.createClass({
 
       for (var i = 0; i < gigs._embedded.events.length; i++) {
         // if ((gigs._embedded.events[i].dates.start.localDate === todayFormat) && (gigs._embedded.events[i].dates.status.code !== 'cancelled')) {
-        if ((gigs._embedded.events[i].dates.start.localDate <= todayFormat) && (gigs._embedded.events[i].sales.public.endDateTime >= todayFormat) && (gigs._embedded.events[i].dates.status.code !== 'cancelled')) {
+        // if ((gigs._embedded.events[i].dates.start.localDate <= todayFormat) && (gigs._embedded.events[i].sales.public.endDateTime >= todayFormat) && (gigs._embedded.events[i].dates.status.code !== 'cancelled')) {
+        var startDate = Date.parse(gigs._embedded.events[i].dates.start.localDate);
+        var gigDate = Date.parse(todayFormat);
+        var endDate = Date.parse(gigs._embedded.events[i].sales.public.endDateTime)
+        if ((startDate <= gigDate) && (endDate >= (gigDate - 16000000)) && (gigs._embedded.events[i].dates.status.code !== 'cancelled')) {
           tinyGigs.push(gigs._embedded.events[i])
         }
       }
