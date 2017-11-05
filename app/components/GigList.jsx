@@ -30,7 +30,7 @@ var GigList = React.createClass({
         var startDate = Date.parse(gigs._embedded.events[i].dates.start.localDate);
         var gigDate = Date.parse(todayFormat);
         var endDate = Date.parse(gigs._embedded.events[i].sales.public.endDateTime)
-        if ((startDate <= gigDate) && (endDate >= (gigDate - 16000000)) && (gigs._embedded.events[i].dates.status.code !== 'cancelled')) {
+        if ((startDate <= gigDate) && (endDate >= (gigDate - 1000000)) && (gigs._embedded.events[i].dates.status.code !== 'cancelled')) {
           tinyGigs.push(gigs._embedded.events[i])
         }
       }
