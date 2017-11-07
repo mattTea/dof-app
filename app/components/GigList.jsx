@@ -84,9 +84,17 @@ var GigList = React.createClass({
         </li>
       );
 
+      var gigTypeHeader;
+      console.log('gigTypeHeader gigType: ' + this.props.gigType);
+      if (this.props.gigType === 'theatre') {
+        gigTypeHeader = "Today's tiny plays...";
+      } else {
+        gigTypeHeader = "Today's tiny gigs...";
+      }
+
       return (
         <div className="text-left">
-          <h4 id="list-header">Today's tiny gigs...</h4>
+          <h4 id="list-header">{gigTypeHeader}</h4>
           <div id="list-body">
             <ul>{listItems}</ul>
           </div>
