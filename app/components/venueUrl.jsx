@@ -59,7 +59,8 @@ var venueHref = [
   {venueName: 'Archspace', venueUrl: 'http://archspace.london/'},
   {venueName: 'Arcola Theatre', venueUrl: 'https://www.arcolatheatre.com/events/'},
   {venueName: 'Old Red Lion Theatre', venueUrl: 'http://www.oldredliontheatre.co.uk/shows.html'},
-  {venueName: 'Battersea Arts Centre', venueUrl: 'https://www.bac.org.uk/content_category/3262/whats_on/whats_on'}
+  {venueName: 'Battersea Arts Centre', venueUrl: 'https://www.bac.org.uk/content_category/3262/whats_on/whats_on'},
+  {venueName: 'ULU Live at Student Central', venueUrl: 'http://ulu-live.co.uk/'}
   // {venueName: 'Lyric Theatre', venueUrl: 'https://www.nimaxtheatres.com/shows/'} // TEST
 ];
 
