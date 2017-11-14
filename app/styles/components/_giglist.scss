@@ -15,8 +15,8 @@
     padding-left: 0;
     margin: 0;
     list-style: none;
-    overflow-y: scroll; /* has to be scroll, not auto for the webkit touch to work */
-    -webkit-overflow-scrolling: touch;
+    // overflow-y: scroll; /* has to be scroll, not auto for the webkit touch to work */
+    // -webkit-overflow-scrolling: touch;
   }
   li {
     padding: 0.3em;
