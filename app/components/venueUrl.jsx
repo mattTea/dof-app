@@ -12,7 +12,7 @@ var venueHref = [
   {venueName: 'Moth Club', venueUrl: 'http://www.mothclub.co.uk/events'},
   {venueName: 'Old Blue Last', venueUrl: 'http://www.theoldbluelast.com/listings/'},
   {venueName: 'Hoxton Square Bar & Kitchen', venueUrl: 'http://www.hoxtonsquarebar.com/events/'},
-  {venueName: 'Underworld Camden', venueUrl: 'https://www.theunderworldcamden.co.uk/gigs'},
+  {venueName: 'Underworld', venueUrl: 'https://www.theunderworldcamden.co.uk/gigs'},
   {venueName: 'Proud Camden', venueUrl: 'http://proudcamden.com/listings-tickets/'},
   {venueName: 'The Camden Assembly', venueUrl: 'http://camdenassembly.com/whats-on/?range=live-show'},
   {venueName: 'KOKO', venueUrl: 'http://www.koko.uk.com/listings'},

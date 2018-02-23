@@ -1,6 +1,6 @@
 var axios = require('axios');
 
-var tinyVenues = 'KovZ9177WvV,KovZ9177M50,Z598xZL4Zak1F,ZFr9jZFekA,KovZpZAtFe6A,KovZ91773p0,KovZ91779sV,KovZpZAt6kkA,KovZpZAt6kkA';
+var tinyVenues = 'KovZ9177WvV,KovZ9177M50,Z598xZL4Zak1F,ZFr9jZFekA,KovZpZAtFe6A,KovZ91773p0,KovZ91779sV,KovZpZAt6kkA,KovZpZAt6kkA,KovZ9177obf,Z598xZL4ZFFd1';
 
 var dPlus = new Date();
 dPlus.setDate(dPlus.getDate() + 30);
@@ -60,4 +60,6 @@ KovZ91773p0   King's Head Theatre
 KovZ91779sV   Arcola Theatre
 KovZpZAt6kkA  Old Red Lion Theatre
 KovZpZAntFFA  Old Red Lion Theatre
+KovZ9177obf   Hen and Chickens Theatre
+Z598xZL4ZFFd1 Little Angel Theatre
 */
