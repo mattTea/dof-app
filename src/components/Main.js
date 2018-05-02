@@ -1,10 +1,10 @@
 import React from 'react';
 import NavHeader from './NavHeader';
 
-var imgUrl = require('../../public/images/hands-up.jpg');
+// var imgUrl = require('../../public/images/hands-up.jpg');
 
 var styles = {
-  backgroundImage: 'url(' + imgUrl + ')',
+  // backgroundImage: 'url(' + imgUrl + ')',
   backgroundSize: 'cover',
   height: '100%',
   backgroundPosition: 'center',
