@@ -1,14 +1,15 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
-// import Main from './components/Main';
+import Gigs from '../components/Gigs';
+// import Main from '../components/Main';
 import NavHeader from '../components/NavHeader';
-// import Plays from './components/Plays';
+// import Plays from '../components/Plays';
 
-const Main = () => (
-  <div>
-    Music component
-  </div>
-);
+// const Main = () => (
+//   <div>
+//     Music component
+//   </div>
+// );
 
 const Plays = () => (
   <div>
@@ -16,20 +17,21 @@ const Plays = () => (
   </div>
 );
 
-const NotFoundPage = () => (
-  <div>
-    Oops, page not found. <Link to="/">Back to gigs!</Link>
-  </div>
-);
+// const Gigs = () => (
+//   <div>
+//     Gigs component
+//   </div>
+// );
 
 const AppRouter = () => (
   <BrowserRouter>
     <div>
       <NavHeader />
       <Switch>
-        <Route path="/" component={Main} exact={true}/>
+        {/* <Route path="/" component={Main} exact={true} /> */}
+        <Route path="/" component={Gigs} exact={true} />
         <Route path="/plays" component={Plays} />
-        <Route component={NotFoundPage} />
+        <Route component={Gigs} />
       </Switch>
     </div>
   </BrowserRouter>

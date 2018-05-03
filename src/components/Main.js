@@ -1,10 +1,11 @@
 import React from 'react';
-import NavHeader from './NavHeader';
+// import NavHeader from './NavHeader';
 
 // var imgUrl = require('../../public/images/hands-up.jpg');
 
-var styles = {
+const styles = {
   // backgroundImage: 'url(' + imgUrl + ')',
+  backgroundImage: '../../public/images/hands-up.jpg',
   backgroundSize: 'cover',
   height: '100%',
   backgroundPosition: 'center',
@@ -12,11 +13,11 @@ var styles = {
   backgroundAttachment: 'fixed'
 };
 
-var Main = (props) => {
+const Main = (props) => {
   return (
     <div style={styles}>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-      <NavHeader/>
+      {/* <NavHeader/> */}
       <div className="row">
         <div className="columns small-10 medium-6 large-6 small-centered">
           {props.children}
@@ -26,4 +27,4 @@ var Main = (props) => {
   );
 }
 
-module.exports = Main;
+export default Main;
