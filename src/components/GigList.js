@@ -1,7 +1,7 @@
-var React = require('react');
+import React from 'react';
 
-var GigList = React.createClass({
-  render: function () {
+export default class GigList extends React.Component {
+  render() {
     var {gigs, gigType} = this.props;
 
     var tinyGigs = [];
@@ -70,7 +70,7 @@ var GigList = React.createClass({
       console.log('noDupeListOfGigs.length: ' + noDupeListOfGigs.length);
       console.log('noDupeListOfGigs: ' + JSON.stringify(noDupeListOfGigs));
 
-      var venueHref = require('./venueUrl.jsx').venueHref;
+      var venueHref = require('./venueUrl.js').venueHref;
 
       const listItems = noDupeListOfGigs.map((noDupeListOfGigs, index) =>
         <li key={index}>
@@ -102,6 +102,4 @@ var GigList = React.createClass({
       );
     }
   }
-});
-
-module.exports = GigList;
+};

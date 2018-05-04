@@ -1,18 +1,20 @@
-var React = require('react');
+import React from 'react';
 
-var GigSearch = React.createClass({
-  propTypes: {
-    gigType: React.PropTypes.string.isRequired
-  },
-  onFormSubmit: function (e) {
+export default class GigSearch extends React.Component {
+
+  // propTypes: {
+  //   gigType: React.PropTypes.string.isRequired
+  // },
+  
+  onFormSubmit = (e) => {
     e.preventDefault();
 
     var gigs = this.refs.gigs; // there are no refs highlighted in the form below?
 
     this.props.onSearch(gigs); // if valid, call the parent 'onSearch' function
-  },
+  }
 
-  render: function () {
+  render() {
     var {gigType} = this.props;
 
     var renderFindGigsButton = () => {
@@ -31,6 +33,4 @@ var GigSearch = React.createClass({
       </div>
     );
   }
-});
-
-module.exports = GigSearch;
+};
