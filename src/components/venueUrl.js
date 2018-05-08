@@ -36,7 +36,7 @@ var venueHref = [
   {venueName: 'Cafe Oto', venueUrl: 'https://www.cafeoto.co.uk/events/'},
   {venueName: 'The Islington', venueUrl: 'https://www.theislington.com/events/'},
   {venueName: 'Macbeth', venueUrl: 'http://www.themacbeth.co.uk/events/'},
-  {venueName: 'Waiting Room', venueUrl: 'http://waitingroomn16.com/event-list/'},
+  {venueName: 'The Waiting Room', venueUrl: 'http://waitingroomn16.com/event-list/'},
   {venueName: 'Green Note', venueUrl: 'http://www.greennote.co.uk/events-page/'},
   {venueName: 'Lewis Cubitt Square', venueUrl: 'https://www.kingscross.co.uk/lewis-cubitt-square'},
   {venueName: 'The Finsbury', venueUrl: 'http://www.thefinsbury.co.uk/listings/'},
@@ -60,7 +60,8 @@ var venueHref = [
   {venueName: 'Arcola Theatre', venueUrl: 'https://www.arcolatheatre.com/events/'},
   {venueName: 'Old Red Lion Theatre', venueUrl: 'http://www.oldredliontheatre.co.uk/shows.html'},
   {venueName: 'Battersea Arts Centre', venueUrl: 'https://www.bac.org.uk/content_category/3262/whats_on/whats_on'},
-  {venueName: 'ULU Live at Student Central', venueUrl: 'http://ulu-live.co.uk/'}
+  {venueName: 'ULU Live at Student Central', venueUrl: 'http://ulu-live.co.uk/'},
+  {venueName: 'Hampstead Theatre', venueUrl: 'https://www.hampsteadtheatre.com/whats-on/'}
   // {venueName: 'Lyric Theatre', venueUrl: 'https://www.nimaxtheatres.com/shows/'} // TEST
 ];
 

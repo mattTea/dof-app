@@ -1,2 +1,9 @@
-@import './base/settings';
-@import './base/base';
+@import "base/settings";
+@import "base/base";
+@import "base/variables";
+@import "components/container";
+@import "components/gigs";
+@import "components/giglist";
+@import "components/gigsearch";
+@import "components/main";
+@import "components/navheader";

@@ -3,29 +3,24 @@ import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import Gigs from '../components/Gigs';
 // import Main from '../components/Main';
 import NavHeader from '../components/NavHeader';
-// import Plays from '../components/Plays';
+import Plays from '../components/Plays';
 
-// const Main = () => (
-//   <div>
-//     Music component
-//   </div>
-// );
+const imgUrl = require('../../public/images/hands-up.jpg');
 
-const Plays = () => (
-  <div>
-    Theatre component
-  </div>
-);
-
-// const Gigs = () => (
-//   <div>
-//     Gigs component
-//   </div>
-// );
+const styles = {
+  backgroundImage: 'url(' + imgUrl + ')',
+  // backgroundImage: `url(${imgUrl})`,
+  // backgroundImage: '../../public/images/hands-up.jpg',
+  backgroundSize: 'cover',
+  height: '100%',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+  backgroundAttachment: 'fixed'
+};
 
 const AppRouter = () => (
   <BrowserRouter>
-    <div>
+    <div style={styles}>
       <NavHeader />
       <Switch>
         {/* <Route path="/" component={Main} exact={true} /> */}

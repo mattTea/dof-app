@@ -42,7 +42,7 @@ export default class Gigs extends React.Component {
     }
 
     return (
-      <div>
+      <div className="container">
         <h1 className="text-center page-title">Feeling intimate?</h1>
         <h6 className="text-center page-blurb">For those who prefer their bands close and their drinks in a glass.</h6>
         <GigSearch onSearch={this.handleSearch} gigType={gigType}/>
