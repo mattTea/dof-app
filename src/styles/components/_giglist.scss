@@ -19,6 +19,9 @@
     // -webkit-overflow-scrolling: touch;
   }
   li {
+    font-size: $m-size;
+    font-weight: 300;
+    line-height: 1.5;
     padding: 0.3em;
     padding-left: 0.75em;
   }
@@ -43,4 +46,8 @@
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
   }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  
 }

@@ -5,17 +5,17 @@ import Gigs from '../components/Gigs';
 import NavHeader from '../components/NavHeader';
 import Plays from '../components/Plays';
 
-const imgUrl = require('../../public/images/hands-up.jpg');
+// const imgUrl = require('../../public/images/hands-up.jpg');
 
 const styles = {
-  backgroundImage: 'url(' + imgUrl + ')',
+  // backgroundImage: 'url(' + imgUrl + ')',
   // backgroundImage: `url(${imgUrl})`,
   // backgroundImage: '../../public/images/hands-up.jpg',
-  backgroundSize: 'cover',
-  height: '100%',
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
-  backgroundAttachment: 'fixed'
+  // backgroundSize: 'cover',
+  // height: '100%',
+  // backgroundPosition: 'center',
+  // backgroundRepeat: 'no-repeat',
+  // backgroundAttachment: 'fixed'
 };
 
 const AppRouter = () => (

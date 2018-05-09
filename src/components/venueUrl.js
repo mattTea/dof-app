@@ -9,6 +9,7 @@ var venueHref = [
   {venueName: 'Windmill', venueUrl: 'https://www.windmillbrixton.co.uk/'},
   {venueName: 'Nambucca', venueUrl: 'http://www.nambucca.co.uk/events/'},
   {venueName: 'Notting Hill Arts Centre', venueUrl: 'https://www.nottinghillartsclub.com/events'},
+  {venueName: 'MOTH Club', venueUrl: 'http://www.mothclub.co.uk/events'},
   {venueName: 'Moth Club', venueUrl: 'http://www.mothclub.co.uk/events'},
   {venueName: 'Old Blue Last', venueUrl: 'http://www.theoldbluelast.com/listings/'},
   {venueName: 'Hoxton Square Bar & Kitchen', venueUrl: 'http://www.hoxtonsquarebar.com/events/'},

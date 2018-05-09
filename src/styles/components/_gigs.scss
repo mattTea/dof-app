@@ -1,15 +1,31 @@
 .page-title {
-  padding-top: 0.5em;
-  padding-bottom: 0.25em;
-  color: #1779ba;
+  color: $blue;
+  font-size: $xl-size;
   font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: .5rem;
+  margin-top: 0;
+  padding-bottom: .25em;
+  padding-top: .5em;
+  text-align: center;
 }
 
 .page-blurb {
-  padding-bottom: 1em;
   color: white;
+  font-size: $m-size;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: .5em;
+  margin-top: 0;
+  padding-bottom: 1em;
+  padding-top: 0;
+  text-align: center; 
 }
 
 .page-loading {
   color: grey;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  
 }
