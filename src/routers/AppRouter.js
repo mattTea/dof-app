@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import Gigs from '../components/Gigs';
-// import Main from '../components/Main';
 import NavHeader from '../components/NavHeader';
 import Plays from '../components/Plays';
 import imgUrl from '../../public/images/hands-up.jpg';
@@ -20,7 +19,6 @@ const AppRouter = () => (
     <div style={styles}>
       <NavHeader />
       <Switch>
-        {/* <Route path="/" component={Main} exact={true} /> */}
         <Route path="/" component={Gigs} exact={true} />
         <Route path="/plays" component={Plays} />
         <Route component={Gigs} />

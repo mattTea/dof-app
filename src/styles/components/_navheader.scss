@@ -1,11 +1,8 @@
-.top-bar, .top-bar ul {
-  background-color: $nav-background;
-}
-
 .vertical-align {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  padding-left: 3rem;
 }
 
 .vertical-align {
@@ -16,27 +13,4 @@
   &::after {
     display: none;
   }
-}
-
-.top-bar-right {
-  text-align: right;
-}
-
-.top-bar {
-  .menu-text {
-    color: $nav-text-color;
-  }
-
-  .menu > .menu-text > a {
-    display: inline;
-    padding: 0;
-  }
-
-  .active-link {
-    font-weight: bold;
-  }
-}
-
-@media (min-width: $desktop-breakpoint) {
-  
 }
