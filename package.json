@@ -5,6 +5,7 @@
   "author": "mattTea",
   "license": "MIT",
   "scripts": {
+    "start": "node src/app.js",
     "serve": "live-server public/",
     "build": "webpack",
     "dev-server": "webpack-dev-server"
