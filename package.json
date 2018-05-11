@@ -5,10 +5,12 @@
   "author": "mattTea",
   "license": "MIT",
   "scripts": {
-    "start": "node ./src/app.js",
+    "start": "node server/server.js",
     "serve": "live-server public/",
-    "build": "webpack",
-    "dev-server": "webpack-dev-server"
+    "build:dev": "webpack",
+    "build:prod": "webpack -p env production",
+    "dev-server": "webpack-dev-server",
+    "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -19,6 +21,7 @@
     "babel-preset-env": "1.5.2",
     "babel-preset-react": "6.24.1",
     "css-loader": "0.28.4",
+    "express": "4.15.4",
     "file-loader": "^1.1.11",
     "live-server": "^1.2.0",
     "node-sass": "4.5.3",
