@@ -2,6 +2,7 @@ import React from 'react';
 import GigList from './GigList';
 import GigSearch from './GigSearch';
 import ticketmaster from '../api/ticketmaster';
+// import animationImgUrl from '../../public/images/blue-headphones.png';
 
 export default class Gigs extends React.Component {
   state = {
@@ -31,7 +32,11 @@ export default class Gigs extends React.Component {
 
     function renderGigList () {
       if (isLoading) {
-        return <h5 className="text-center page-loading">Getting gigs...</h5>;
+        return (
+          <div className="container loading-gigs">
+            <img src={require('../../public/images/blue-headphones.png')} style={{maxWidth: "1.5em", maxHeight: "1.5em"}}></img>
+          </div>
+        )
       } else if (gigs) {
         return (
           <div>

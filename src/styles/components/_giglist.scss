@@ -3,8 +3,10 @@
 }
 
 #list-header {
-  padding-top: 0.5em;
   padding-bottom: 0.25em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  padding-top: 0.5em;
   color: #00558b;
 }
 
@@ -24,6 +26,7 @@
     line-height: 1.5;
     padding: 0.3em;
     padding-left: 0.75em;
+    padding-right: 0.75em;
   }
   li:nth-child(odd) {
     background-color: rgba(144, 13, 13, .3);

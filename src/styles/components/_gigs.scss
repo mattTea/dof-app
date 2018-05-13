@@ -22,8 +22,30 @@
   text-align: center; 
 }
 
-.page-loading {
-  color: grey;
+.loading-gigs {
+  align-items: center;
+  animation: pulse 500ms infinite ease-out;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+@keyframes pulse {
+  to {
+    transform: scale(2, 2) scale(1, 1);
+  }
+}
+
+.loading-plays {
+  align-items: center;
+  animation: swing 1000ms infinite linear;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+@keyframes swing {
+  to {
+    transform: translate(-2rem) translate(4rem);
+  }
 }
 
 @media (max-width: $desktop-breakpoint) {

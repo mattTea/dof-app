@@ -31,7 +31,11 @@ export default class Plays extends React.Component {
 
     function renderGigList () {
       if (isLoading) {
-        return <h5 className="text-center page-loading">Getting gigs...</h5>;
+        return (
+          <div className="container loading-plays">
+            <img src={require('../../public/images/blue-glasses.png')} style={{maxWidth: "2em", maxHeight: "2em"}}></img>
+          </div>
+        )
       } else if (gigs) {
         return (
           <div>
