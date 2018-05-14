@@ -40,26 +40,14 @@
 
 .loading-plays {
   align-items: center;
-  animation: swing 2.5s infinite linear;
+  animation: yRotate 1.5s infinite linear;
   display: flex;
   justify-content: center;
   padding: 2rem;
 }
-@keyframes swing {
-  0% {
-    transform: translate(0);
-  }
-  25% {
-    transform: translate(2rem);
-  }
-  50% {
-    transform: translate(0);
-  }
-  75% {
-    transform: translate(-2rem);
-  }
-  100% {
-    transform: translate(0);
+@keyframes yRotate {
+  to {
+    transform: rotateY(1turn);
   }
 }
 
