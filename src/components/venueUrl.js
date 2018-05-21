@@ -29,6 +29,7 @@ var venueHref = [
   {venueName: 'Hope & Anchor', venueUrl: 'http://www.hopeandanchor-islington.co.uk/dates-diary'},
   {venueName: 'Cargo', venueUrl: 'http://cargo-london.com/events/'},
   {venueName: 'Servant Jazz Quarters', venueUrl: 'http://servantjazzquarters.com/'},
+  {venueName: 'Servants Jazz Quarters', venueUrl: 'http://servantjazzquarters.com/'},
   {venueName: 'St Moritz', venueUrl: 'http://www.stmoritzclub.co.uk/whats-on'},
   {venueName: 'Lock Tavern', venueUrl: 'http://www.lock-tavern.com/event-list/'},
   {venueName: 'Black Heart', venueUrl: 'http://www.ourblackheart.com/'},
