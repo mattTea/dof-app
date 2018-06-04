@@ -1,12 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
-import Home from '../components/Home';
-import TrainingItemDetail from '../components/TrainingItemDetail';
-import TrainingItemList from '../components/TrainingItemList';
-import Contact from '../components/Contact';
-import About from '../components/About';
+import Gigs from '../components/Gigs';
 import NavHeader from '../components/NavHeader';
-import imgUrl from '../../public/images/coffee.jpg';
+import Plays from '../components/Plays';
+import imgUrl from '../../public/images/hands-up.jpg';
 
 const styles = {
   backgroundImage: `url(${imgUrl})`,
@@ -22,12 +19,9 @@ const AppRouter = () => (
     <div style={styles}>
       <NavHeader />
       <Switch>
-        <Route path="/" component={Home} exact={true} />
-        <Route path="/training" component={TrainingItemList} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/about" component={About} />
-        <Route path="/training-detail" component={TrainingItemDetail} />
-        <Route component={Home} />
+        <Route path="/" component={Gigs} exact={true} />
+        <Route path="/plays" component={Plays} />
+        <Route component={Gigs} />
       </Switch>
     </div>
   </BrowserRouter>
