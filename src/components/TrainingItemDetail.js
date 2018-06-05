@@ -1,4 +1,5 @@
 //not yet used
+//look at how to link to separate page from blog-app
 
 import React from 'react';
 
