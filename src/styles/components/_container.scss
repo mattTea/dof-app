@@ -2,4 +2,12 @@
   max-width: 60rem;
   margin: 0 auto;
   padding: 0 $m-size;
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    color: $blue;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
 }

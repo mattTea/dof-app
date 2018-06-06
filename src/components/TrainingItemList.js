@@ -1,14 +1,5 @@
 import React from 'react';
 import TrainingItem from './TrainingItem';
-// import StageSelector from './StageSelector';
-// import DisciplineSelector from './DisciplineSelector';
-
-// Show blank with a couple of toggles/filters... stage and discipline
-// Maybe show a few 'promoted' courses here to start
-
-// should probs just show overview on this list page, with link to detail page for individual course
-// look at how to link to separate page from blog-app
-// this detail page to link out to actual resource
 
 const trainingResources = [{
   discipline: 'Analysis',
@@ -38,44 +29,38 @@ const trainingResources = [{
 
 export default class TrainingItemList extends React.Component {
   state = {
-    filteredTrainingResources: trainingResources
-    // filteredTrainingResources: []
+    filteredTrainingResources: []
   };
 
-  componentDidUpdate() {
-    if (this.props.stageValue || this.props.disciplineValue === 'select') {
-      // return;
-      console.log('getting to here!');
-    } else if (this.props.stageValue && this.props.disciplineValue === 'all') {
-      this.setState(() => ({ filteredTrainingResources: trainingResources }));
+  componentDidUpdate(prevProps) {
+    if (this.props.stageValue === 'select' || this.props.disciplineValue === 'select') {
+      // do nothing
+    } else if (prevProps !== this.props) {
+      let newFilter = [];
+      for (var i = 0; i < trainingResources.length; i++) {
+        if ((trainingResources[i].stage === this.props.stageValue || this.props.stageValue === 'All') && (trainingResources[i].discipline === this.props.disciplineValue || this.props.disciplineValue === 'All')) {
+          newFilter.push(trainingResources[i]);
+        }
+      }
+      this.setState(() => ({ filteredTrainingResources: newFilter }));
     } else {
-      alert('Need a filter!');
-      // const newFilter = trainingResources.filter(trainingResource => ((trainingResource.stage === this.props.stageValue) && (trainingResource.discipline === this.props.discipline)));
-      // this.setState(() => ({ filteredTrainingResources: newFilter }));
+      console.log('Component updated.')
     }
-    
-    // TrainingList Item is not re-rendering when an update is made... how do I make it do that?!
-
   };
 
   render() {
     return (
-      <div className="container">
-        <h3>Training component</h3>
-        {console.log('Discipline props state: ' + this.props.disciplineValue, '| Stage props state: ' + this.props.stageValue)}
-        {console.log(trainingResources)}
-        {/* <StageSelector /> */}
-        {/* <DisciplineSelector /> */}
+      <div>
         {
-          this.state.filteredTrainingResources.map((trainingResource, index) => (
-            <a href={trainingResource.url} key={index} target="_blank">
+          this.state.filteredTrainingResources.map((filteredTrainingResource, index) => (
+            <a href={filteredTrainingResource.url} key={index} target="_blank">
               <TrainingItem
                 // key={index}
-                discipline={trainingResource.discipline}
+                discipline={filteredTrainingResource.discipline}
                 count={index + 1}
-                stage={trainingResource.stage}
-                topic={trainingResource.topic}
-                description={trainingResource.description}  
+                stage={filteredTrainingResource.stage}
+                topic={filteredTrainingResource.topic}
+                description={filteredTrainingResource.description}  
               />
             </a>
           ))
@@ -84,27 +69,3 @@ export default class TrainingItemList extends React.Component {
     )
   }
 }
-
-// const TrainingItemList = () => (
-//   <div className="container">
-//     <h3>Training component</h3>
-//     <StageSelector />
-//     <DisciplineSelector />
-//     {
-//       trainingResources.map((trainingResource, index) => (
-//         <a href={trainingResource.url} key={index} target="_blank">
-//           <TrainingItem
-//             // key={index}
-//             discipline={trainingResource.discipline}
-//             count={index + 1}
-//             stage={trainingResource.stage}
-//             topic={trainingResource.topic}
-//             description={trainingResource.description}
-//           />
-//         </a>
-//       ))
-//     }
-//   </div>
-// );
-
-// export default TrainingItemList;
