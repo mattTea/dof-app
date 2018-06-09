@@ -23,9 +23,9 @@ export default class TrainingPage extends React.Component {
       <h3>Training resources</h3>
         <div className="filter">
           <label>
-            Filter by stage:
+            {/* Filter by stage: */}
             <select value={this.state.stageValue} onChange={this.handleStageChange}>
-              <option value="select">-select-</option>
+              <option value="select">- stage -</option>
               <option value="All">All</option>
               <option value="Delivery Fundamentals">Delivery Fundamentals</option>
               <option value="Individual Choice">Individual Choice</option>
@@ -34,9 +34,9 @@ export default class TrainingPage extends React.Component {
         </div>
         <div className="filter">
           <label>
-            Filter by discipline:
+            {/* Filter by discipline: */}
             <select value={this.state.disciplineValue} onChange={this.handleDisciplineChange}>
-              <option value="select">-select-</option>
+              <option value="select">- discipline -</option>
               <option value="All">All</option>
               <option value="Analysis">Analysis</option>
               <option value="Test">Test</option>

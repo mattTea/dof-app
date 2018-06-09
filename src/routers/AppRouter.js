@@ -10,6 +10,7 @@ import imgUrl from '../../public/images/coffee.jpg';
 
 const styles = {
   backgroundImage: `url(${imgUrl})`,
+  backgroundColor: '#c0c5da5e',
   backgroundSize: 'cover',
   height: '100%',
   backgroundPosition: 'center',

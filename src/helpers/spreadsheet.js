@@ -20,7 +20,7 @@ export function load(callback) {
             skill: trainingCatalogueItem[2],
             topic: trainingCatalogueItem[3],
             description: trainingCatalogueItem[4] + ' ' + trainingCatalogueItem[5],
-            url: trainingCatalogueItem[10]
+            url: trainingCatalogueItem[12]
           })) || [];
           callback({
             trainingCatalogueItems

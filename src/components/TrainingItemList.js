@@ -85,10 +85,7 @@ export default class TrainingItemList extends React.Component {
       }
       this.setState(() => ({ filteredTrainingResources: newFilter }));
     } else {
-      console.log('Component updated')
-      if (this.state.filteredTrainingResources.length > 0) {
-        console.log('URL: ' + this.state.filteredTrainingResources[0].url);
-      }
+      console.log('Component updated');
     }
   };
 

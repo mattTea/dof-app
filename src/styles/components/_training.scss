@@ -5,8 +5,40 @@
   padding: $s-size;
 }
 
+.description {
+  font-size: $xs-size;
+  padding: 0.8rem;
+}
+
+.topic {
+  color: $grey;
+  font-size: $ml-size;
+  padding-bottom: $s-size;
+  text-align: center;
+}
+
+.sub-heading {
+  font-size: $m-size;
+  padding: 0.8rem;
+}
+
 .filter {
   padding: $s-size 0 0;
   // padding-left: $s-size;
   // padding-right: $s-size;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align-last: center;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+select {
+  width: 30rem;
 }
