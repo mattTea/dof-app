@@ -42,6 +42,7 @@ export default class TrainingPage extends React.Component {
               <option value="Test">Test</option>
               <option value="Development">Development</option>
               <option value="Delivery Leadership">Delivery Leadership</option>
+              <option value="Core Skills">Core Skills</option>
             </select>
           </label>
         </div>
