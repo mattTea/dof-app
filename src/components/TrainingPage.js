@@ -19,7 +19,7 @@ export default class TrainingPage extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container top-padding">
       <h3>Training resources</h3>
         <div className="filter">
           <label>

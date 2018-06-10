@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Contact = () => (
-  <div className="container">
+  <div className="container top-padding">
     <h3>Contact</h3>
     <h5>Got a question?</h5>
     <div className="contact">

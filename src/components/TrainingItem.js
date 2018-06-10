@@ -11,7 +11,11 @@ const TrainingItem = (props) => (
       <img src={require('../../public/images/star.png')} style={{maxWidth: "1.5em", maxHeight: "1.5em"}}></img>
     </div>
     <div className="sub-heading">{props.stage}: {props.discipline}</div>
-    <div className="description">{props.description}</div> 
+    <div className="description">{props.description}{<br/>}{<br/>}{props.learningObjective}</div>
+    {props.duration && 
+      <div className="duration">Duration: {props.duration}</div>
+    }
+    
   </div>
 );
 

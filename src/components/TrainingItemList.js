@@ -101,7 +101,9 @@ export default class TrainingItemList extends React.Component {
                 count={index + 1}
                 stage={filteredTrainingResource.stage}
                 topic={filteredTrainingResource.topic}
-                description={filteredTrainingResource.description}  
+                description={filteredTrainingResource.description}
+                learningObjective={filteredTrainingResource.learningObjective}
+                duration={filteredTrainingResource.duration}
               />
             </a>
           ))

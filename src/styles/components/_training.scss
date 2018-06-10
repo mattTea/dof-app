@@ -1,25 +1,18 @@
-.training-item {
-  background-color: $off-white;
-  color: $light-blue;
-  margin: $s-size;
-  padding: $s-size;
+select {
+  width: 30rem;
 }
 
 .description {
   font-size: $xs-size;
   padding: 0.8rem;
+  text-align: justify;
 }
 
-.topic {
-  color: $grey;
-  font-size: $ml-size;
-  padding-bottom: $s-size;
+.duration {
   text-align: center;
-}
-
-.sub-heading {
-  font-size: $m-size;
-  padding: 0.8rem;
+  font-size: $xs-size;
+  font-weight: bold;
+  padding-top: 1rem;
 }
 
 .filter {
@@ -39,6 +32,21 @@
   align-items: center;
   }
 
-select {
-  width: 30rem;
+.sub-heading {
+  font-size: $m-size;
+  padding: 0.8rem;
+}
+
+.topic {
+  color: $grey;
+  font-size: $ml-size;
+  padding-bottom: $s-size;
+  text-align: center;
+}
+
+.training-item {
+  background-color: $off-white;
+  color: $light-blue;
+  margin: $s-size;
+  padding: $s-size;
 }
