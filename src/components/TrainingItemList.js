@@ -3,40 +3,6 @@ import config from '../../config';
 import { load } from '../helpers/spreadsheet';
 import TrainingItem from './TrainingItem';
 
-// const trainingResources = [{
-//   discipline: 'Analysis',
-//   stage: 'Delivery Fundamentals',
-//   skill: 'Requirements Engineering',
-//   topic: 'BDD: Story Mapping',
-//   description: 'Why a map is better than a flat backlog to explain and prioritise your product.',
-//   rating: '4.2',
-//   url: 'https://jpattonassociates.com/the-new-backlog/'
-// }, {
-//   discipline: 'Analysis',
-//   stage: 'Delivery Fundamentals',
-//   skill: 'Requirements Engineering',
-//   topic: 'BDD: Example Mapping',
-//   description: 'What example mapping is, and why you might use it to define the scope of your story and its scenarios.',
-//   rating: '4.8',
-//   url: 'https://cucumber.io/blog/2015/12/08/example-mapping-introduction'
-// }, {
-//   discipline: 'Development',
-//   stage: 'Individual Choice',
-//   skill: 'Full Stack Development',
-//   topic: 'Web Skills',
-//   description: 'Gain basic knowledge of JavaScript.',
-//   rating: '3.7',
-//   url: 'https://www.w3schools.com/js/default.asp'
-// }, {
-//   discipline: 'Test',
-//   stage: 'Individual Choice',
-//   skill: 'Testing',
-//   topic: 'Modern Testing',
-//   description: 'Rapid Software Testing is a skill-based and context-driven testing methodology that invites you to apply ingenuity, tools, and lightweight heuristics to test complex products.',
-//   rating: '4.0',
-//   url: 'http://www.developsense.com/courses.html'
-// }]
-
 export default class TrainingItemList extends React.Component {
   state = {
     trainingCatalogueItems: [],
@@ -72,7 +38,6 @@ export default class TrainingItemList extends React.Component {
     window.gapi.load("client", this.initClient);
   };
 
-  // to use spreadsheet, access this.state.trainingCatalogueItems[] rather than the const trainingResources[]
   componentDidUpdate(prevProps) {
     if (this.props.stageValue === 'select' || this.props.disciplineValue === 'select') {
       // do nothing
@@ -104,6 +69,7 @@ export default class TrainingItemList extends React.Component {
                 description={filteredTrainingResource.description}
                 learningObjective={filteredTrainingResource.learningObjective}
                 duration={filteredTrainingResource.duration}
+                rating={filteredTrainingResource.rating}
               />
             </a>
           ))
