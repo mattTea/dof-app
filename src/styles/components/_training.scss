@@ -26,11 +26,18 @@ select {
   text-align-last: center;
 }
 
+.rate-button {
+  background: none;
+  border: none;
+  margin: auto;
+  display: block;
+}
+
 .rating {
   display: flex;
   justify-content: center;
   align-items: center;
-  }
+}
 
 .sub-heading {
   font-size: $m-size;
@@ -49,4 +56,18 @@ select {
   color: $light-blue;
   margin: $s-size;
   padding: $s-size;
+}
+
+.view-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  img {
+    max-width: 1.3rem;
+    max-height: 1.3rem;
+    padding-left: 1rem;
+    position: relative;
+    top: -1rem;
+  }
 }

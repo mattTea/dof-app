@@ -54,12 +54,16 @@ export default class TrainingItemList extends React.Component {
     }
   };
 
+  handleRate = () => {
+    alert('Rate this course... (coming soon)');
+  };
+
   render() {
     return (
       <div>
         {
           this.state.filteredTrainingResources.map((filteredTrainingResource, index) => (
-            <a href={filteredTrainingResource.url} key={index} target="_blank">
+            <div key={index}>
               <TrainingItem
                 // key={index}
                 discipline={filteredTrainingResource.discipline}
@@ -70,8 +74,10 @@ export default class TrainingItemList extends React.Component {
                 learningObjective={filteredTrainingResource.learningObjective}
                 duration={filteredTrainingResource.duration}
                 rating={filteredTrainingResource.rating}
+                url={filteredTrainingResource.url}
+                handleRate={this.handleRate}
               />
-            </a>
+            </div>
           ))
         }
       </div>
