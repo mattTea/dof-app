@@ -2,8 +2,7 @@ import React from 'react';
 
 const Contact = () => (
   <div className="container top-padding">
-    <h3>Contact</h3>
-    <h5>Got a question?</h5>
+    <h3>Got a question?</h3>
     <div className="contact">
       Visit Slack for all DoF and training related queries... 
       <a href={'https://johnlewis.slack.com/messages/CALN0LRFV'} target="_blank">

@@ -4,7 +4,7 @@ import Home from '../components/Home';
 import TrainingItemDetail from '../components/TrainingItemDetail';
 import TrainingPage from '../components/TrainingPage';
 import Contact from '../components/Contact';
-import About from '../components/About';
+import Booking from '../components/Booking';
 import NavHeader from '../components/NavHeader';
 import imgUrl from '../../public/images/coffee.jpg';
 
@@ -26,7 +26,7 @@ const AppRouter = () => (
         <Route path="/" component={Home} exact={true} />
         <Route path="/training" component={TrainingPage} />
         <Route path="/contact" component={Contact} />
-        <Route path="/about" component={About} />
+        <Route path="/booking" component={Booking} />
         <Route path="/training-detail" component={TrainingItemDetail} />
         <Route component={Home} />
       </Switch>

@@ -13,8 +13,8 @@ const NavHeader = () => (
       <NavLink to="/contact">
         <img src={require('../../public/images/contact.png')} style={{maxWidth: "1.5em", maxHeight: "1.5em", padding: "0 .5em"}}></img>
       </NavLink>
-      <NavLink to="/about">
-        <img src={require('../../public/images/about.png')} style={{maxWidth: "1.5em", maxHeight: "1.5em", padding: "0 .5em"}}></img>
+      <NavLink to="/booking">
+        <img src={require('../../public/images/book.png')} style={{maxWidth: "1.5em", maxHeight: "1.5em", padding: "0 .5em"}}></img>
       </NavLink>
     </header>
   </div>
