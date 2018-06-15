@@ -7,7 +7,7 @@ const requestNewCourseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdG3HP6dVl
 const Booking = () => (
   <div className="container top-padding">
     <h3>Booking</h3>
-    <p style={{textAlign: "center"}}>To book a place on any of the facilitated sessions, <a href={bookUrl} target="_blank"><b>click here</b></a></p>
+    <p style={{textAlign: "center"}}>To book a place on any of the scheduled sessions, <a href={bookUrl} target="_blank"><b>click here</b></a></p>
     <br/>
     <p style={{textAlign: "center"}}>To request an alternative training resource, <a href={requestNewCourseUrl} target="_blank"><b>click here</b></a></p>
   </div>

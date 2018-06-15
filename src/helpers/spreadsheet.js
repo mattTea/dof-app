@@ -7,8 +7,8 @@ export function load(callback) {
     window.gapi.client.sheets.spreadsheets.values
       .get({
         spreadsheetId: config.spreadsheetId,
-        range: "trainingResources!A2:U59" // <- test dof-app-data sheet range
-        // range: "trainingResources!A4:M194" <-real sheet requiring credentials
+        range: "trainingResources!A4:U194" // <- dof-app-data sheet range
+        // range: "trainingResources!A4:M194" <- live sheet requiring credentials
       })
       .then(
         // The response values are an array of arrays where each one is a row within the spreadsheet
@@ -22,6 +22,7 @@ export function load(callback) {
             topic: trainingCatalogueItem[3],
             description: trainingCatalogueItem[4],
             learningObjective: trainingCatalogueItem[5],
+            deliveryMethod: trainingCatalogueItem[6],
             url: trainingCatalogueItem[12],
             duration: trainingCatalogueItem[10],
             rating: trainingCatalogueItem[20]
