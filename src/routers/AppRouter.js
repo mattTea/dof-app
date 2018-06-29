@@ -6,6 +6,7 @@ import TrainingPage from '../components/TrainingPage';
 import Contact from '../components/Contact';
 import Booking from '../components/Booking';
 import NavHeader from '../components/NavHeader';
+import Add from '../components/Add'
 import imgUrl from '../../public/images/coffee.jpg';
 
 const styles = {
@@ -28,6 +29,7 @@ const AppRouter = () => (
         <Route path="/contact" component={Contact} />
         <Route path="/booking" component={Booking} />
         <Route path="/training-detail" component={TrainingItemDetail} />
+        <Route path="/add" component={Add} />
         <Route component={Home} />
       </Switch>
     </div>
