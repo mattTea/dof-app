@@ -2,12 +2,14 @@ import React from 'react';
 import config from '../../config';
 import { load } from '../helpers/spreadsheet';
 import TrainingItem from './TrainingItem';
+import RatingModal from './RatingModal';
 
 export default class TrainingItemList extends React.Component {
   state = {
     trainingCatalogueItems: [],
     error: null,
-    filteredTrainingResources: []
+    filteredTrainingResources: [],
+    modalIsOpen: false
   };
 
   initClient = () => {
@@ -55,7 +57,11 @@ export default class TrainingItemList extends React.Component {
   };
 
   handleRate = () => {
-    alert('Rate this course... (coming soon)');
+    this.setState({ modalIsOpen: true });
+  };
+
+  handleCloseModal = () => {
+    this.setState(() => ({ modalIsOpen: false }));
   };
 
   render() {
@@ -81,6 +87,11 @@ export default class TrainingItemList extends React.Component {
             </div>
           ))
         }
+        {console.log('isModalOpen: ' + this.state.modalIsOpen)}
+        <RatingModal
+          handleCloseModal={this.handleCloseModal}
+          modalIsOpen={this.state.modalIsOpen}
+        />
       </div>
     )
   }
