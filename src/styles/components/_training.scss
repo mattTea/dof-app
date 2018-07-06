@@ -33,6 +33,10 @@ select {
   display: block;
 }
 
+.rate-button:focus {
+  outline: none !important;
+}
+
 .rating {
   display: flex;
   justify-content: center;

@@ -21,6 +21,7 @@
   background: $light-blue;
   color: white;
   max-width: 30rem;
+  min-width: 25%;
   outline: none;
   padding: $l-size;
   text-align: center;
@@ -28,6 +29,7 @@
 
 .modal__title {
   margin: 0 0 $m-size 0;
+  font-size: $ml-size;
 }
 
 .modal__body {
@@ -35,4 +37,9 @@
   font-weight: 300;
   margin: 0 0 $l-size 0;
   word-break: break-all;
+}
+
+.course-to-rate {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
