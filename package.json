@@ -9,7 +9,7 @@
     "serve": "live-server public/",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
-    "dev-server": "webpack-dev-server",
+    "dev-server": "webpack-dev-server --host 0.0.0.0",
     "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {

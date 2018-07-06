@@ -8,4 +8,6 @@ WORKDIR /app
 
 RUN npm install --silent
 
+EXPOSE 8080
+
 CMD ["yarn", "run", "dev-server"]
