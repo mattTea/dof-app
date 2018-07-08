@@ -11,8 +11,14 @@ export default class AddPage extends React.Component {
     inputDescriptionValue: '',
     inputOutcomeValue: '',
     estimatedDurationValue: '',
+    resourceNameValue: '',
+    resourceUrlValue: '',
+    startingLevelValue: 'select',
+    achieveLevelValue: 'select',
     data: {},
-    postSuccess: ""
+    postSuccess: null,
+    postFailure: null,
+    lastResponse: null
 
   };
 
@@ -41,6 +47,16 @@ export default class AddPage extends React.Component {
     this.setState(() => ({ formatValue }));
   }
 
+  handleStartLevelChange = event => {
+    const startingLevelValue = event.target.value
+    this.setState(() => ({ startingLevelValue }));
+  }
+
+  handleAchieveLevelChange = event => {
+    const achieveLevelValue = event.target.value
+    this.setState(() => ({ achieveLevelValue }));
+  }
+
   handleClearClick = () => {
     this.setState({
       stageValue: 'select',
@@ -50,12 +66,22 @@ export default class AddPage extends React.Component {
       formatValue: 'select',
       inputTitleValue: '',
       inputDescriptionValue: '',
-      inputOutcomeValue: ''
-
+      inputOutcomeValue: '',
+      resourceNameValue: '',
+      resourceUrlValue: '',
+      startingLevelValue: 'select',
+      achieveLevelValue: 'select',
+      postSuccess: null,
+      postFailure: null
     })
   }
 
   handleSubmitClick = () => {
+    this.setState({
+      postSuccess: null,
+      postFailure: null
+    })
+
     let requestData = {
       discipline: this.state.disciplineValue,
       stage: this.state.stageValue,
@@ -66,30 +92,49 @@ export default class AddPage extends React.Component {
       delivery_method: this.state.teachingMethodValue,
       delivery_format: this.state.formatValue,
       estimated_duration: this.state.estimatedDurationValue,
-      resource_name: 'Test 4',
-      resource_url: '',
-      pre_requisite_level: '1',
-      achievable_level: '3' }
+      resource_name: this.state.resourceNameValue,
+      resource_url: encodeURI(this.state.resourceUrlValue),
+      pre_requisite_level: this.state.startingLevelValue,
+      achievable_level: this.state.achieveLevelValue
+    }
 
     let data = JSON.stringify(requestData)
-
-    console.log(data)
 
     fetch('http://localhost:3030/api/training', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
       },
       body: data
     })
       .then(res => {
-        return res.json()
+        console.log(res)
+        let data = res.json()
+        if (res.status === 200) {
+          return this.setState({ postSuccess: true, postFailure: false, lastResponse: data })
+        }
+        if (res.status === 500) {
+          console.log('data', data)
+          return this.setState({ postSuccess: false, postFailure: true, lastResponse: data.error })
+        }
       })
-      .then(data => {
-        return this.setState({ postSuccess: true })
-      }).catch(err => {
-        return this.setState({ postSuccess: false})
+      .catch(err => {
+        console.log('error', err)
+        return this.setState({ postFailure: true, lastResponse: err })
+      })
+
+    this.setState({
+      stageValue: 'select',
+      disciplineValue: 'select',
+      proficiencyValue: 'select',
+      teachingMethodValue: 'select',
+      formatValue: 'select',
+      inputTitleValue: '',
+      inputDescriptionValue: '',
+      inputOutcomeValue: '',
+      estimated_duration: '',
+      resourceNameValue: ''
     })
   }
 
@@ -111,18 +156,30 @@ export default class AddPage extends React.Component {
 
   }
 
-  updateEstiamtedDurationValue = event => {
+  updateEstimatedDurationValue = event => {
     const estimatedDurationValue = event.target.value
     this.setState({ estimatedDurationValue })
 
   }
 
-  render() {
+  updateResourceNameValue = event => {
+    const resourceNameValue = event.target.value
+    this.setState({ resourceNameValue })
+
+  }
+
+  updateResourceUrlValue = event => {
+    const resourceUrlValue = event.target.value
+    this.setState({ resourceUrlValue })
+
+  }
+
+  render () {
     const discipline = this.state.stageValue !== 'select'
       ? <div className="filter">
         <label>Select Discipline</label>
         <label>
-        {/* Filter by discipline: */}
+          {/* Filter by discipline: */}
           <select value={this.state.disciplineValue} onChange={this.handleDisciplineChange}>
             <option value="select">- select -</option>
             <option value="Analysis">Analysis</option>
@@ -162,7 +219,7 @@ export default class AddPage extends React.Component {
             <option value="Security Testing">Security Testing</option>
             <option value="Servant Leadership">Servant Leadership</option>
             <option value="Solution Design">Solution Design</option>
-            <option value="Stakeholder Management ">Stakeholder Management </option>
+            <option value="Stakeholder Management ">Stakeholder Management</option>
             <option value="Technical Market Radar">Technical Market Radar</option>
             <option value="Testing">Testing</option>
           </select>
@@ -171,17 +228,22 @@ export default class AddPage extends React.Component {
       : null
 
     const trainingTitleLabel = this.state.proficiencyValue !== 'select'
-      ? <div className="filter"><label>Training Title</label><input value={this.state.inputTitleValue} onChange={this.updateInputTitleValue} type="text" id="inputTitleValue"/></div>
+      ? <div className="filter"><label>Training Title</label><input value={this.state.inputTitleValue}
+                                                                    onChange={this.updateInputTitleValue} type="text"
+                                                                    id="inputTitleValue" /></div>
       : null
 
     const descriptionLabel = this.state.inputTitleValue !== ''
-      ? <div className="filter"><label>Description</label><input value={this.state.inputDescriptionValue} onChange={this.updateInputDescriptionValue} type="text" id="training-description"/></div>
+      ? <div className="filter"><label>Description</label><input value={this.state.inputDescriptionValue}
+                                                                 onChange={this.updateInputDescriptionValue} type="text"
+                                                                 id="training-description" /></div>
       : null
 
     const outcomeLabel = this.state.inputDescriptionValue !== ''
       ? <div className="filter">
-          <label>Learning outcome</label>
-          <input value={this.state.inputOutcomeValue} onChange={this.updateInputOutcomeValue} type="text" id="training-learning-outcome"/>
+        <label>Learning outcome</label>
+        <input value={this.state.inputOutcomeValue} onChange={this.updateInputOutcomeValue} type="text"
+               id="training-learning-outcome" />
       </div>
       : null
 
@@ -205,7 +267,7 @@ export default class AddPage extends React.Component {
       : null
 
     const format = this.state.teachingMethodValue !== 'select'
-      ?  <div className="filter">
+      ? <div className="filter">
         <label>Select format of training</label>
         <label>
           {/* Filter by format: */}
@@ -220,14 +282,65 @@ export default class AddPage extends React.Component {
       </div>
       : null
 
-    const estimatedDuration = this.state.formatValue != 'select'
+    const estimatedDuration = this.state.formatValue !== 'select'
       ? <div className="filter">
         <label>Estimated Duration (MUST be in format hh:mm:ss)</label>
-        <input value={this.state.estimatedDurationValue} onChange={this.updateEstiamtedDurationValue} type="text" id="training-learning-outcome"/>
+        <input value={this.state.estimatedDurationValue} onChange={this.updateEstimatedDurationValue} type="text"
+               id="training-estimated-duration" />
       </div>
       : null
 
-    const button = this.state.estimatedDurationValue !== ''
+    const resourceName = this.state.estimatedDurationValue !== ''
+      ? <div className="filter">
+        <label>Resource Name</label>
+        <input value={this.state.resourceNameValue} onChange={this.updateResourceNameValue}  type="text"
+               id="training-resource-name" />
+      </div>
+      : null
+
+    const resourceURL = this.state.resourceNameValue !== ''
+      ? <div className="filter">
+        <label>Resource Url</label>
+        <input value={this.state.resourceUrlValue} onChange={this.updateResourceUrlValue} type="text"
+               id="training-resource-url"/>
+      </div>
+      : null
+
+    const startingLevel = this.state.resourceUrlValue !== ''
+      ? <div className="filter">
+        <label>Select Starting Level</label>
+        <label>
+          {/* Filter by stage: */}
+          <select value={this.state.startingLevelValue} onChange={this.handleStartLevelChange}>
+            <option value="select">- select -</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </label>
+      </div>
+      : null
+
+    const achieveLevel = this.state.startingLevelValue !== 'select'
+      ? <div className="filter">
+        <label>Select Level Achievable</label>
+        <label>
+          {/* Filter by stage: */}
+          <select value={this.state.achieveLevelValue} onChange={this.handleAchieveLevelChange}>
+            <option value="select">- select -</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </label>
+      </div>
+      : null
+
+    const button = this.state.achieveLevelValue !== 'select'
       ? <div className="filter">
         <button onClick={this.handleSubmitClick}>Submit Training</button>
       </div>
@@ -241,7 +354,24 @@ export default class AddPage extends React.Component {
         {teachingMethod}
         {format}
         {estimatedDuration}
+        {resourceName}
+        {resourceURL}
+        {startingLevel}
+        {achieveLevel}
         {button}
+      </div>
+      : null
+
+    const response = this.state.postSuccess
+      ? <div className="filter">
+        <label>Your training item was added successfully</label>
+      </div>
+      : null
+
+    const error = this.state.postFailure
+      ? <div className="filter">
+        <label>There was a problem submitting your training item</label>
+        <label>Error is: {this.state.lastResponse}</label>
       </div>
       : null
 
@@ -264,7 +394,11 @@ export default class AddPage extends React.Component {
         {discipline}
         {skills}
         {details}
-        <div className="filter"><button onClick={this.handleClearClick}>Clear the form and start again</button></div>
+        {response}
+        {error}
+        <div className="filter">
+          <button onClick={this.handleClearClick}>Clear the form and start again</button>
+        </div>
       </div>
     )
   }
