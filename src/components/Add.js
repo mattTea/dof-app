@@ -112,6 +112,18 @@ export default class AddPage extends React.Component {
         console.log(res)
         let data = res.json()
         if (res.status === 200) {
+          this.setState({
+            stageValue: 'select',
+            disciplineValue: 'select',
+            proficiencyValue: 'select',
+            teachingMethodValue: 'select',
+            formatValue: 'select',
+            inputTitleValue: '',
+            inputDescriptionValue: '',
+            inputOutcomeValue: '',
+            estimated_duration: '',
+            resourceNameValue: ''
+          })
           return this.setState({ postSuccess: true, postFailure: false, lastResponse: data })
         }
         if (res.status === 500) {
@@ -123,19 +135,6 @@ export default class AddPage extends React.Component {
         console.log('error', err)
         return this.setState({ postFailure: true, lastResponse: err })
       })
-
-    this.setState({
-      stageValue: 'select',
-      disciplineValue: 'select',
-      proficiencyValue: 'select',
-      teachingMethodValue: 'select',
-      formatValue: 'select',
-      inputTitleValue: '',
-      inputDescriptionValue: '',
-      inputOutcomeValue: '',
-      estimated_duration: '',
-      resourceNameValue: ''
-    })
   }
 
   updateInputTitleValue = event => {
@@ -293,7 +292,7 @@ export default class AddPage extends React.Component {
     const resourceName = this.state.estimatedDurationValue !== ''
       ? <div className="filter">
         <label>Resource Name</label>
-        <input value={this.state.resourceNameValue} onChange={this.updateResourceNameValue}  type="text"
+        <input value={this.state.resourceNameValue} onChange={this.updateResourceNameValue} type="text"
                id="training-resource-name" />
       </div>
       : null
@@ -302,7 +301,7 @@ export default class AddPage extends React.Component {
       ? <div className="filter">
         <label>Resource Url</label>
         <input value={this.state.resourceUrlValue} onChange={this.updateResourceUrlValue} type="text"
-               id="training-resource-url"/>
+               id="training-resource-url" />
       </div>
       : null
 

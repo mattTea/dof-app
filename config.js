@@ -1,6 +1,7 @@
 export default {
   apiKey: "AIzaSyA136g990kCX3KWz3-9xTEQ9YlUpZu7WMQ",
   displayAdd: true,
+  useAPIForGet: true,
   clientId: "631139378215-npjcqvmkm9h0g2q13ggao5c3r2d0gp1r.apps.googleusercontent.com",
   scope: "https://www.googleapis.com/auth/spreadsheets",
   discoveryDocs:
