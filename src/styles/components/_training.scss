@@ -1,3 +1,19 @@
+.add-button {
+  background-color: $green;
+  border-radius: 5px;
+  color: $dark-blue;
+  display: block;
+  font-size: $s-size;
+  margin: auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  padding: 0.75rem 2.5rem;
+}
+
+.add-button:focus {
+  outline: none !important;
+}
+
 select {
   width: 30rem;
 }
@@ -24,6 +40,18 @@ select {
   justify-content: center;
   align-items: center;
   text-align-last: center;
+}
+
+.form {
+  padding: 0.75rem;
+}
+
+.form-field {
+  margin: 1rem;
+}
+
+.form-label {
+  
 }
 
 .rate-button {

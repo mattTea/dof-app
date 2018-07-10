@@ -1,10 +1,20 @@
 import React from 'react';
 import TrainingItemList from './TrainingItemList';
+import AddModal from './AddModal';
 
 export default class TrainingPage extends React.Component {
   state = {
     stageValue: 'select',
-    disciplineValue: 'select'
+    disciplineValue: 'select',
+    addModalIsOpen: false
+  };
+
+  handleAddItem = () => {
+    this.setState({ addModalIsOpen: true });
+  };
+
+  handleCloseAddModal = () => {
+    this.setState(() => ({ addModalIsOpen: false }));
   };
 
   handleStageChange = (event) => {
@@ -20,7 +30,7 @@ export default class TrainingPage extends React.Component {
   render() {
     return (
       <div className="container top-padding">
-      <h3>Training resources</h3>
+        <h3>Training resources</h3>
         <div className="filter">
           <label>
             {/* Filter by stage: */}
@@ -46,7 +56,12 @@ export default class TrainingPage extends React.Component {
             </select>
           </label>
         </div>
+        <button className="add-button" onClick={this.handleAddItem}>Add new</button>
         <TrainingItemList stageValue={this.state.stageValue} disciplineValue={this.state.disciplineValue}/>
+        <AddModal
+          handleCloseAddModal={this.handleCloseAddModal}
+          addModalIsOpen={this.state.addModalIsOpen}
+        />
       </div>
     )
   }
