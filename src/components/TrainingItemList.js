@@ -103,14 +103,11 @@ export default class TrainingItemList extends React.Component {
         console.log('err', err);
         return this.setState({ ratingsAveragesByTrainingItem: [] })
       })
-  }
-
-  render () {
 
     if (config.useAPIForGet) {
       let trainingObejects = []
       for (let ratingsIndex in this.state.ratingsAveragesByTrainingItem) {
-        for (let trainingIndex in this.state.filteredTrainingResources) {
+        for (let trainingIndex in this.state.trainingCatalogueItems) {
           if (this.state.ratingsAveragesByTrainingItem[ ratingsIndex ].trainingItemId === this.state.trainingCatalogueItems[ trainingIndex ].id) {
             let trainingItemToUpdate = this.state.trainingCatalogueItems[ trainingIndex ]
             trainingItemToUpdate.rating = this.state.ratingsAveragesByTrainingItem[ ratingsIndex ].averageRating
@@ -118,8 +115,12 @@ export default class TrainingItemList extends React.Component {
           }
         }
       }
+      this.setState({ trainingCatalogueItems: trainingObejects })
     }
 
+  }
+
+  render () {
 
     return (
       <div>
