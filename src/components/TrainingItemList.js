@@ -105,18 +105,21 @@ export default class TrainingItemList extends React.Component {
       })
 
     if (config.useAPIForGet) {
+      console.log(this.state)
       let trainingObejects = []
-      for (let ratingsIndex in this.state.ratingsAveragesByTrainingItem) {
-        for (let trainingIndex in this.state.trainingCatalogueItems) {
+      for (let trainingIndex in this.state.trainingCatalogueItems) {
+        let trainingItemToUpdate = this.state.trainingCatalogueItems[ trainingIndex ]
+        for (let ratingsIndex in this.state.ratingsAveragesByTrainingItem) {
           if (this.state.ratingsAveragesByTrainingItem[ ratingsIndex ].trainingItemId === this.state.trainingCatalogueItems[ trainingIndex ].id) {
-            let trainingItemToUpdate = this.state.trainingCatalogueItems[ trainingIndex ]
             trainingItemToUpdate.rating = this.state.ratingsAveragesByTrainingItem[ ratingsIndex ].averageRating
-            trainingObejects.push(trainingItemToUpdate)
           }
         }
+        trainingObejects.push(trainingItemToUpdate)
       }
-      this.setState({ trainingCatalogueItems: trainingObejects })
+      await this.setState({ trainingCatalogueItems: trainingObejects })
     }
+
+    console.log(this.state)
 
   }
 
