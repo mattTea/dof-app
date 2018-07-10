@@ -37,7 +37,7 @@ export default class TrainingItemList extends React.Component {
   componentDidMount () {
     // 1. Load the Google Sheets api JS client library
     if (config.useAPIForGet) {
-      this.fetchData()
+      this.fetchData().then(() => console.log('fetchData complete'))
     } else {
       window.gapi.load("client", this.initClient);
     }

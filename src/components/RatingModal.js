@@ -4,16 +4,33 @@ import Modal from 'react-modal';
 export default class RatingModal extends React.Component {
 
   state = {
-    ratingToPost: 'select'
+    ratingToPost: 'select',
+    postFailure: null,
+    postSuccess: null,
+    postResponse: null
   }
 
   componentWillMount() {
     Modal.setAppElement('body');
   };
 
+  closeModal = (event) => {
+    this.setState({
+      postFailure: null,
+      postSuccess: null,
+      postResponse: null
+      }
+    )
+    this.props.handleCloseModal()
+
+  }
+
   handleRatingChange = (event) => {
     const newRatingValue = event.target.value;
-    this.setState(() => ({ ratingToPost: newRatingValue }));
+    this.setState(() => ({ ratingToPost: newRatingValue,
+      postFailure: null,
+      postSuccess: null,
+      postResponse: null }));
   }
 
   handleRatingSubmit = async () => {
@@ -34,25 +51,32 @@ export default class RatingModal extends React.Component {
       return response.json().then(data => ({ data: data, status: response.status }));
     })
       .then(res => {
+        console.log(res)
         if (res.status === 200) {
-          this.setState({ postSuccess: true, postResponse: res.data });
+          this.setState({ ratingToPost: 'select', postSuccess: true, postResponse: res.data });
         }
         if (res.status === 500) {
-          this.setState({ postSuccess: false, postResponse: res });
+          this.setState({ postSuccess: false, postFailure: true, postResponse: res });
         }
       })
       .catch(err => {
         console.log('err', err);
-        return this.setState({ postSuccess: false, postResponse: err })
+        return this.setState({ postSuccess: false, postFailure: true, postResponse: err })
       })
-
-    await console.log(this.state)
   }
 
   render () {
 
     const submitRatingButton = this.state.ratingToPost !== 'select'
       ? <button className="button" onClick={this.handleRatingSubmit}>Submit Rating</button>
+      : null
+
+    const ratingsSuccessfulSubmit = this.state.postSuccess === true
+      ? <label>Thanks for submitting your rating of the course!</label>
+      : null
+
+    const ratingsError = this.state.postFailure === true
+      ? <label>There was an error when submitting your rating. Error: {this.state.postResponse}</label>
       : null
 
     return (
@@ -87,8 +111,10 @@ export default class RatingModal extends React.Component {
           </label>
         </div>
         {submitRatingButton}
+        {ratingsSuccessfulSubmit}
+        {ratingsError}
         <h3 className="course-to-rate">{this.props.courseToRate}</h3>
-        <button className="button" onClick={this.props.handleCloseModal}>Close</button>
+        <button className="button" onClick={this.closeModal}>Close</button>
       </Modal>
     )
   }
