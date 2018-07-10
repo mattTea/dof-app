@@ -67,6 +67,7 @@ export default class AddPage extends React.Component {
       inputTitleValue: '',
       inputDescriptionValue: '',
       inputOutcomeValue: '',
+      estimatedDurationValue: '',
       resourceNameValue: '',
       resourceUrlValue: '',
       startingLevelValue: 'select',
@@ -76,7 +77,7 @@ export default class AddPage extends React.Component {
     })
   }
 
-  handleSubmitClick = () => {
+  handleSubmitClick = async () => {
     this.setState({
       postSuccess: null,
       postFailure: null
@@ -100,7 +101,7 @@ export default class AddPage extends React.Component {
 
     let data = JSON.stringify(requestData)
 
-    fetch('http://localhost:3030/api/training', {
+    await fetch('http://localhost:3030/api/training', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -108,9 +109,9 @@ export default class AddPage extends React.Component {
       },
       body: data
     })
+      .then(response => {
+        return response.json().then(data => ({ data: data, status: response.status }))})
       .then(res => {
-        console.log(res)
-        let data = res.json()
         if (res.status === 200) {
           this.setState({
             stageValue: 'select',
@@ -124,17 +125,18 @@ export default class AddPage extends React.Component {
             estimated_duration: '',
             resourceNameValue: ''
           })
-          return this.setState({ postSuccess: true, postFailure: false, lastResponse: data })
+          return this.setState({ postSuccess: true, postFailure: false, lastResponse: res.data })
         }
         if (res.status === 500) {
-          console.log('data', data)
-          return this.setState({ postSuccess: false, postFailure: true, lastResponse: data.error })
+          console.log('data', res)
+          return this.setState({ postSuccess: false, postFailure: true, lastResponse: res.data })
         }
       })
       .catch(err => {
-        console.log('error', err)
-        return this.setState({ postFailure: true, lastResponse: err })
+        return this.setState({ postFailure: true, lastResponse: err.message })
       })
+
+    console.log(this.state)
   }
 
   updateInputTitleValue = event => {
@@ -370,7 +372,7 @@ export default class AddPage extends React.Component {
     const error = this.state.postFailure
       ? <div className="filter">
         <label>There was a problem submitting your training item</label>
-        <label>Error is: {this.state.lastResponse}</label>
+        <label>Error is: {this.state.lastResponse.error}</label>
       </div>
       : null
 
