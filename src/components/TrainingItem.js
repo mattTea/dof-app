@@ -16,7 +16,7 @@ export default class TrainingItem extends React.Component {
 
   starRating = () => {
     const ratingNumber = Number(this.props.rating);
-    
+
     if (ratingNumber === 0) {
       return (
         <div className="rating">
@@ -147,13 +147,14 @@ export default class TrainingItem extends React.Component {
         <div className="sub-heading">{this.props.stage}: {this.props.discipline}</div>
         <div className="description">{this.props.description}{<br/>}{<br/>}{this.props.learningObjective}</div>
         <div className="duration">{this.props.deliveryMethod}</div>
-        {this.props.duration && 
+        {this.props.duration &&
           <div className="duration">Duration: {this.props.duration}</div>
         }
         <RatingModal
           handleCloseModal={this.handleCloseModal}
           modalIsOpen={this.state.modalIsOpen}
           courseToRate={this.props.topic}
+          trainingItemId={this.props.id}
         />
       </div>
     )

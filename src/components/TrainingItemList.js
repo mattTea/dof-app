@@ -96,12 +96,12 @@ export default class TrainingItemList extends React.Component {
           this.setState({ ratingsAveragesByTrainingItem: res.data });
         }
         if (res.status === 500) {
-          this.setState({ ratingsAveragesByTrainingItem: [] });
+          this.setState({ ratingsAveragesByTrainingItem: [], error: res.data.error });
         }
       })
       .catch(err => {
         console.log('err', err);
-        return this.setState({ ratingsAveragesByTrainingItem: [] })
+        return this.setState({ ratingsAveragesByTrainingItem: [], error: err.message })
       })
 
     if (config.useAPIForGet) {
@@ -129,6 +129,7 @@ export default class TrainingItemList extends React.Component {
             <div key={index}>
               <TrainingItem
                 // key={index}
+                id={filteredTrainingResource.id}
                 discipline={filteredTrainingResource.discipline}
                 count={index + 1}
                 stage={filteredTrainingResource.stage}
