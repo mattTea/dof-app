@@ -19,7 +19,7 @@ export default class AddModal extends React.Component {
       >
         <div className="modal__title">Add a new training item</div>
         <div className="modal__body">(coming soon)</div>
-        <AddItemForm isOpen={this.props.addModalIsOpen}/>
+        <AddItemForm handleSubmit={this.props.handleSubmit} />
         <button className="button" onClick={this.props.handleCloseAddModal}>Close</button>
       </Modal>
     )

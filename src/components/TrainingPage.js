@@ -27,6 +27,12 @@ export default class TrainingPage extends React.Component {
     this.setState(() => ({ disciplineValue: newDisciplineValue }));
   }
 
+  handleSubmit(event) {
+    alert('New course added');
+    this.setState(() => ({ addModalIsOpen: false }));
+    event.preventDefault();
+  }
+
   render() {
     return (
       <div className="container top-padding">
@@ -61,6 +67,7 @@ export default class TrainingPage extends React.Component {
         <AddModal
           handleCloseAddModal={this.handleCloseAddModal}
           addModalIsOpen={this.state.addModalIsOpen}
+          handleSubmit={this.handleSubmit}
         />
       </div>
     )

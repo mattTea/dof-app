@@ -2,15 +2,10 @@ import React from 'react';
 
 export default class AddItemForm extends React.Component {
 
-  handleSubmit(event) {
-    alert('New course added');
-    event.preventDefault();
-  }
-
   render() {
     return (
       <div>
-        <form className="form" onSubmit={this.handleSubmit}>
+        <form className="form" onSubmit={this.props.handleSubmit}>
           <label className="form-label">
             Topic: 
             <input className="form-field" type="text" /><br/>
