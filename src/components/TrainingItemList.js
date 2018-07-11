@@ -6,6 +6,7 @@ import TrainingItem from './TrainingItem';
 export default class TrainingItemList extends React.Component {
   state = {
     trainingCatalogueItems: [],
+    ratingsAveragesByTrainingItem: [],
     error: null,
     filteredTrainingResources: []
   };
@@ -33,19 +34,23 @@ export default class TrainingItemList extends React.Component {
     }
   };
 
-  componentDidMount() {
+  componentDidMount () {
     // 1. Load the Google Sheets api JS client library
-    window.gapi.load("client", this.initClient);
+    if (config.useAPIForGet) {
+      this.fetchData().then(() => console.log('fetchData complete'))
+    } else {
+      window.gapi.load("client", this.initClient);
+    }
   };
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate (prevProps) {
     if (this.props.stageValue === 'select' || this.props.disciplineValue === 'select') {
       // do nothing
     } else if (prevProps !== this.props) {
       let newFilter = [];
-      for (var i = 0; i < this.state.trainingCatalogueItems.length; i++) {
-        if ((this.state.trainingCatalogueItems[i].stage === this.props.stageValue || this.props.stageValue === 'All') && (this.state.trainingCatalogueItems[i].discipline === this.props.disciplineValue || this.props.disciplineValue === 'All')) {
-          newFilter.push(this.state.trainingCatalogueItems[i]);
+      for (let i = 0; i < this.state.trainingCatalogueItems.length; i++) {
+        if ((this.state.trainingCatalogueItems[ i ].stage === this.props.stageValue || this.props.stageValue === 'All') && (this.state.trainingCatalogueItems[ i ].discipline === this.props.disciplineValue || this.props.disciplineValue === 'All')) {
+          newFilter.push(this.state.trainingCatalogueItems[ i ]);
         }
       }
       this.setState(() => ({ filteredTrainingResources: newFilter }));
@@ -54,7 +59,72 @@ export default class TrainingItemList extends React.Component {
     }
   };
 
-  render() {
+  fetchData = async () => {
+    await fetch('http://localhost:3030/api/training', {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    }).then(response => {
+      return response.json().then(data => ({ data: data, status: response.status }));
+    })
+      .then(res => {
+        if (res.status === 200) {
+          this.setState({ trainingCatalogueItems: res.data });
+        }
+        if (res.status === 500) {
+          this.setState({ trainingCatalogueItems: [] });
+        }
+      })
+      .catch(err => {
+        console.log('err', err);
+        return this.setState({ trainingCatalogueItems: [] });
+      })
+
+    await fetch('http://localhost:3030/api/ratings/average', {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    }).then(response => {
+      return response.json().then(data => ({ data: data, status: response.status }));
+    })
+      .then(res => {
+        if (res.status === 200) {
+          this.setState({ ratingsAveragesByTrainingItem: res.data });
+        }
+        if (res.status === 500) {
+          this.setState({ ratingsAveragesByTrainingItem: [], error: res.data.error });
+        }
+      })
+      .catch(err => {
+        console.log('err', err);
+        return this.setState({ ratingsAveragesByTrainingItem: [], error: err.message })
+      })
+
+    if (config.useAPIForGet) {
+      console.log(this.state)
+      let trainingObejects = []
+      for (let trainingIndex in this.state.trainingCatalogueItems) {
+        let trainingItemToUpdate = this.state.trainingCatalogueItems[ trainingIndex ]
+        for (let ratingsIndex in this.state.ratingsAveragesByTrainingItem) {
+          if (this.state.ratingsAveragesByTrainingItem[ ratingsIndex ].trainingItemId === this.state.trainingCatalogueItems[ trainingIndex ].id) {
+            trainingItemToUpdate.rating = this.state.ratingsAveragesByTrainingItem[ ratingsIndex ].averageRating
+          }
+        }
+        trainingObejects.push(trainingItemToUpdate)
+      }
+      await this.setState({ trainingCatalogueItems: trainingObejects })
+    }
+
+    console.log(this.state)
+
+  }
+
+  render () {
+
     return (
       <div>
         {
@@ -62,6 +132,7 @@ export default class TrainingItemList extends React.Component {
             <div key={index}>
               <TrainingItem
                 // key={index}
+                id={filteredTrainingResource.id}
                 discipline={filteredTrainingResource.discipline}
                 count={index + 1}
                 stage={filteredTrainingResource.stage}
@@ -70,9 +141,9 @@ export default class TrainingItemList extends React.Component {
                 learningObjective={filteredTrainingResource.learningObjective}
                 deliveryMethod={filteredTrainingResource.deliveryMethod}
                 duration={filteredTrainingResource.duration}
-                rating={filteredTrainingResource.rating}
+                rating={filteredTrainingResource.rating || 0}
                 url={filteredTrainingResource.url}
-              /> 
+              />
             </div>
           ))
         }
