@@ -17,10 +17,10 @@ export default class AddModal extends React.Component {
         closeTimeoutMS={200}
         className="modal"
       >
-        <div className="modal__title">Add a new training item</div>
+        <div className="modal__title">Add a new training resource</div>
         <div className="modal__body">(coming soon)</div>
         <AddItemForm handleSubmit={this.props.handleSubmit} />
-        <button className="button" onClick={this.props.handleCloseAddModal}>Close</button>
+        {/* <button className="button" onClick={this.props.handleCloseAddModal}>Close</button> */}
       </Modal>
     )
   }

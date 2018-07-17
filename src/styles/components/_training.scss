@@ -6,8 +6,10 @@
   font-size: $s-size;
   margin: auto;
   margin-bottom: 2rem;
-  margin-top: 2rem;
+  // margin-top: 2rem;
   padding: 0.75rem 2.5rem;
+  position: relative;
+  top: 2rem;
 }
 
 .add-button:focus {
@@ -44,14 +46,26 @@ select {
 
 .form {
   padding: 0.75rem;
+  // add display flex and justify child content here?
 }
 
 .form-field {
-  margin: 0.5rem 1rem;
+  // input field
+  margin: 0.5rem 0rem;
+  display: inline-block;
+  float: left;
+  width: 60%;
 }
 
 .form-label {
-  
+  // both label and field container
+  padding-top: 0.5rem;
+  margin: 0.5rem 1rem;
+  display: inline-block;
+  float: left;
+  clear: left;
+  width: 30%;
+  text-align: right;
 }
 
 .rate-button {
