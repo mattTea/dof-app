@@ -6,7 +6,7 @@ export default class AddItemForm extends React.Component {
     return (
       <div>
         <form className="form" onSubmit={this.props.handleSubmit}>
-          <label className="form-label">{"Title: "}</label> 
+          <label className="form-label">Title: </label> 
           <input className="form-field" type="text" /><br/>
           <label className="form-label">Description: </label>
           <input className="form-field" type="text" /><br/>
