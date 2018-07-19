@@ -102,6 +102,8 @@ select {
   color: $light-blue;
   margin: $s-size;
   padding: $s-size;
+  position: relative;
+  top: 2rem;
 }
 
 .view-link {
