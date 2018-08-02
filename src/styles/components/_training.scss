@@ -44,6 +44,14 @@ select {
   text-align-last: center;
 }
 
+.search-field {
+  background-image: url('');
+  font-size: $s-size;
+  padding: 0.5rem;
+  width: 50%;
+  text-align-last: left;
+}
+
 .form {
   // padding: 0.75rem;
   // add display flex and justify child content here?

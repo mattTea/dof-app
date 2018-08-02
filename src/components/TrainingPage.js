@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchList from './SearchList';
 import TrainingItemList from './TrainingItemList';
 import AddModal from './AddModal';
 
@@ -6,7 +7,8 @@ export default class TrainingPage extends React.Component {
   state = {
     stageValue: 'select',
     disciplineValue: 'select',
-    addModalIsOpen: false
+    addModalIsOpen: false,
+    searchTerm: ''
   };
 
   handleAddItem = () => {
@@ -20,18 +22,23 @@ export default class TrainingPage extends React.Component {
   handleStageChange = (event) => {
     const newStageValue = event.target.value
     this.setState(() => ({ stageValue: newStageValue }));
-  }
+  };
 
   handleDisciplineChange = (event) => {
     const newDisciplineValue = event.target.value
     this.setState(() => ({ disciplineValue: newDisciplineValue }));
-  }
+  };
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     alert('New course added');
-    this.setState(() => ({ addModalIsOpen: false }));
     event.preventDefault();
-  }
+    this.handleCloseAddModal();
+  };
+
+  handleSearchChange = (event) => {
+    let newSearchTerm = event.target.value;
+    this.setState(() => ({ searchTerm: newSearchTerm }));
+  };
 
   render() {
     return (
@@ -62,8 +69,17 @@ export default class TrainingPage extends React.Component {
             </select>
           </label>
         </div>
+        <form className="filter">
+          <input
+            className="search-field"
+            type="text"
+            value={this.state.searchTerm}
+            onChange={this.handleSearchChange}
+            placeholder="Search..." />
+        </form>
         <button className="add-button" onClick={this.handleAddItem}>Add new</button>
         <TrainingItemList stageValue={this.state.stageValue} disciplineValue={this.state.disciplineValue}/>
+        <SearchList searchTerm={this.state.searchTerm} />
         <AddModal
           handleCloseAddModal={this.handleCloseAddModal}
           addModalIsOpen={this.state.addModalIsOpen}
