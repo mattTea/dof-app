@@ -39,19 +39,39 @@ export default class TrainingItemList extends React.Component {
   };
 
   componentDidUpdate(prevProps) {
-    if (this.props.stageValue === 'select' || this.props.disciplineValue === 'select') {
-      // do nothing
-    } else if (prevProps !== this.props) {
-      let newFilter = [];
+    if (prevProps !== this.props) {
+      let searchFilter = [];
+
       for (var i = 0; i < this.state.trainingCatalogueItems.length; i++) {
-        if ((this.state.trainingCatalogueItems[i].stage === this.props.stageValue || this.props.stageValue === 'All') && (this.state.trainingCatalogueItems[i].discipline === this.props.disciplineValue || this.props.disciplineValue === 'All')) {
-          newFilter.push(this.state.trainingCatalogueItems[i]);
+        let itemString = JSON.stringify(this.state.trainingCatalogueItems[i]).toLowerCase();
+        let itemMatch = this.props.searchTerm.toLowerCase();
+        // console.log('itemString: ' + itemString, 'itemMatch: ' + itemMatch);
+        if (itemString.includes(itemMatch)) {
+          searchFilter.push(this.state.trainingCatalogueItems[i]);
         }
       }
-      this.setState(() => ({ filteredTrainingResources: newFilter }));
-    } else {
-      console.log('Component updated');
+      this.setState(() => ({ filteredTrainingResources: searchFilter }));
     }
+
+// apply the search filter to the select filtered list
+// so run filter first then search on filteredTraining Resources
+// if filteredTrainingResources = [] then run against trainingCatalogueItems
+
+
+  // componentDidUpdate(prevProps) {  
+  //   if (this.props.stageValue === 'select' || this.props.disciplineValue === 'select') {
+  //     // do nothing
+  //   } else if (prevProps.stageValue !== this.props.stageValue || prevProps.disciplineValue !== this.props.disciplineValue) { <- added property of prevProps in this statement
+  //     let newFilter = [];
+  //     for (var i = 0; i < this.state.trainingCatalogueItems.length; i++) {
+  //       if ((this.state.trainingCatalogueItems[i].stage === this.props.stageValue || this.props.stageValue === 'All') && (this.state.trainingCatalogueItems[i].discipline === this.props.disciplineValue || this.props.disciplineValue === 'All')) {
+  //         newFilter.push(this.state.trainingCatalogueItems[i]);
+  //       }
+  //     }
+  //     this.setState(() => ({ filteredTrainingResources: newFilter }));
+  //   } else {
+  //     console.log('Component updated');
+  //   }
   };
 
   render() {

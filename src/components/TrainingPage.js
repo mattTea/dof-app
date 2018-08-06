@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchList from './SearchList';
+// import SearchList from './SearchList';
 import TrainingItemList from './TrainingItemList';
 import AddModal from './AddModal';
 
@@ -78,8 +78,12 @@ export default class TrainingPage extends React.Component {
             placeholder="Search..." />
         </form>
         <button className="add-button" onClick={this.handleAddItem}>Add new</button>
-        <TrainingItemList stageValue={this.state.stageValue} disciplineValue={this.state.disciplineValue}/>
-        <SearchList searchTerm={this.state.searchTerm} />
+        <TrainingItemList
+          stageValue={this.state.stageValue}
+          disciplineValue={this.state.disciplineValue}
+          searchTerm={this.state.searchTerm}
+        />
+        {/* <SearchList searchTerm={this.state.searchTerm} /> */}
         <AddModal
           handleCloseAddModal={this.handleCloseAddModal}
           addModalIsOpen={this.state.addModalIsOpen}
