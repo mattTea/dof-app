@@ -44,17 +44,8 @@ select {
   text-align-last: center;
 }
 
-.search-field {
-  background-image: url('');
-  font-size: $s-size;
-  padding: 0.5rem;
-  width: 50%;
-  text-align-last: left;
-}
-
-.form {
-  // padding: 0.75rem;
-  // add display flex and justify child content here?
+.filter:focus {
+  outline: none !important;
 }
 
 .form-field {
@@ -91,6 +82,18 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.search-field {
+  // background-image: url('');
+  font-size: $s-size;
+  padding: 0.5rem;
+  width: 50%;
+  text-align-last: left;
+}
+
+.search-field:focus {
+  outline: none !important;
 }
 
 .sub-heading {

@@ -1,5 +1,4 @@
 import React from 'react';
-// import SearchList from './SearchList';
 import TrainingItemList from './TrainingItemList';
 import AddModal from './AddModal';
 
@@ -83,7 +82,6 @@ export default class TrainingPage extends React.Component {
           disciplineValue={this.state.disciplineValue}
           searchTerm={this.state.searchTerm}
         />
-        {/* <SearchList searchTerm={this.state.searchTerm} /> */}
         <AddModal
           handleCloseAddModal={this.handleCloseAddModal}
           addModalIsOpen={this.state.addModalIsOpen}
