@@ -7,7 +7,7 @@ export function load(callback) {
     window.gapi.client.sheets.spreadsheets.values
       .get({
         spreadsheetId: config.spreadsheetId,
-        range: "trainingResources!A4:U194" // <- dof-app-data sheet range
+        range: "trainingResources!A4:L165" // <- dof-app-data sheet range
         // range: "trainingResources!A4:M194" <- live sheet requiring credentials
       })
       .then(
@@ -19,13 +19,12 @@ export function load(callback) {
             discipline: trainingCatalogueItem[0],
             stage: trainingCatalogueItem[1],
             skill: trainingCatalogueItem[2],
-            topic: trainingCatalogueItem[3],
+            title: trainingCatalogueItem[3],
             description: trainingCatalogueItem[4],
-            learningObjective: trainingCatalogueItem[5],
             deliveryMethod: trainingCatalogueItem[6],
-            url: trainingCatalogueItem[12],
-            duration: trainingCatalogueItem[10],
-            rating: trainingCatalogueItem[20]
+            url: trainingCatalogueItem[5],
+            duration: trainingCatalogueItem[8],
+            rating: trainingCatalogueItem[11]
           })) || [];
           callback({
             trainingCatalogueItems

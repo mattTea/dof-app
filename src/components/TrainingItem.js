@@ -136,7 +136,7 @@ export default class TrainingItem extends React.Component {
     return (
       <div className="training-item">
         <div className="view-link">
-          <div className="topic">{this.props.topic}</div>
+          <div className="topic">{this.props.title}</div>
           {this.props.url &&
             <a href={this.props.url} target="_blank"><img src={require('../../public/images/new-window.png')}></img></a>
           }
@@ -145,7 +145,7 @@ export default class TrainingItem extends React.Component {
           <div className="rating">{this.starRating()}</div>
         </button>
         <div className="sub-heading">{this.props.stage}: {this.props.discipline}</div>
-        <div className="description">{this.props.description}{<br/>}{<br/>}{this.props.learningObjective}</div>
+        <div className="description">{this.props.description}</div>
         <div className="duration">{this.props.deliveryMethod}</div>
         {this.props.duration && 
           <div className="duration">Duration: {this.props.duration}</div>

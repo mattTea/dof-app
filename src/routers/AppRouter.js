@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import Home from '../components/Home';
-import TrainingItemDetail from '../components/TrainingItemDetail';
 import TrainingPage from '../components/TrainingPage';
 import Contact from '../components/Contact';
 import Booking from '../components/Booking';
@@ -27,11 +26,10 @@ const AppRouter = () => (
         <Route path="/training" component={TrainingPage} />
         <Route path="/contact" component={Contact} />
         <Route path="/booking" component={Booking} />
-        <Route path="/training-detail" component={TrainingItemDetail} />
         <Route component={Home} />
       </Switch>
     </div>
-  </BrowserRouter>
+  </BrowserRouter>  
 );
 
 export default AppRouter;
