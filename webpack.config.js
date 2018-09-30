@@ -6,6 +6,7 @@ module.exports = (env) => {
   console.log('env', env);
   return {
     entry: './src/app.js',
+    // entry: './src/playground/hoc.js',
     output: {
       path: path.join(__dirname, 'public'),
       filename: 'bundle.js'

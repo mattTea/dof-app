@@ -2,6 +2,8 @@ import React from 'react';
 import TrainingItemList from './TrainingItemList';
 import AddModal from './AddModal';
 
+import TrainingResourceList from './TrainingResourceList';
+
 export default class TrainingPage extends React.Component {
   state = {
     stageValue: 'select',
@@ -87,6 +89,7 @@ export default class TrainingPage extends React.Component {
           addModalIsOpen={this.state.addModalIsOpen}
           handleSubmit={this.handleSubmit}
         />
+        {/* <TrainingResourceList />  <-- this enables the first example redux store-connected component*/}
       </div>
     )
   }
