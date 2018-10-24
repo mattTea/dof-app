@@ -9,6 +9,7 @@ import getVisibleTrainingResources from './selectors/trainingResources';
 
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+import '../src/firebase/firebase';
 
 const store = configureStore();
 
