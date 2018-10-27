@@ -1,15 +1,15 @@
 import React from 'react';
 import TrainingItemList from './TrainingItemList';
 import AddModal from './AddModal';
-
 import TrainingResourceList from './TrainingResourceList';
+import TrainingResourceListFilters from './TrainingResourceListFilters';
 
 export default class TrainingPage extends React.Component {
   state = {
-    stageValue: 'select',
-    disciplineValue: 'select',
-    addModalIsOpen: false,
-    searchTerm: ''
+    // stageValue: 'select',
+    // disciplineValue: 'select',
+    addModalIsOpen: false
+    // searchTerm: ''
   };
 
   handleAddItem = () => {
@@ -20,15 +20,15 @@ export default class TrainingPage extends React.Component {
     this.setState(() => ({ addModalIsOpen: false }));
   };
 
-  handleStageChange = (event) => {
-    const newStageValue = event.target.value
-    this.setState(() => ({ stageValue: newStageValue }));
-  };
+  // handleStageChange = (event) => {
+  //   const newStageValue = event.target.value
+  //   this.setState(() => ({ stageValue: newStageValue }));
+  // };
 
-  handleDisciplineChange = (event) => {
-    const newDisciplineValue = event.target.value
-    this.setState(() => ({ disciplineValue: newDisciplineValue }));
-  };
+  // handleDisciplineChange = (event) => {
+  //   const newDisciplineValue = event.target.value
+  //   this.setState(() => ({ disciplineValue: newDisciplineValue }));
+  // };
 
   handleSubmit = (event) => {
     alert('New course added');
@@ -36,18 +36,17 @@ export default class TrainingPage extends React.Component {
     this.handleCloseAddModal();
   };
 
-  handleSearchChange = (event) => {
-    let newSearchTerm = event.target.value;
-    this.setState(() => ({ searchTerm: newSearchTerm }));
-  };
+  // handleSearchChange = (event) => {
+  //   let newSearchTerm = event.target.value;
+  //   this.setState(() => ({ searchTerm: newSearchTerm }));
+  // };
 
   render() {
     return (
       <div className="container top-padding">
         <h3>Training resources</h3>
-        <div className="filter">
+        {/* <div className="filter">
           <label>
-            {/* Filter by stage: */}
             <select value={this.state.stageValue} onChange={this.handleStageChange}>
               <option value="select">- stage -</option>
               <option value="All">All</option>
@@ -58,7 +57,6 @@ export default class TrainingPage extends React.Component {
         </div>
         <div className="filter">
           <label>
-            {/* Filter by discipline: */}
             <select value={this.state.disciplineValue} onChange={this.handleDisciplineChange}>
               <option value="select">- discipline -</option>
               <option value="All">All</option>
@@ -78,18 +76,19 @@ export default class TrainingPage extends React.Component {
             onChange={this.handleSearchChange}
             placeholder="Search..." />
         </form>
-        <button className="add-button" onClick={this.handleAddItem}>Add new</button>
         <TrainingItemList
           stageValue={this.state.stageValue}
           disciplineValue={this.state.disciplineValue}
           searchTerm={this.state.searchTerm}
-        />
+        /> */}
         <AddModal
           handleCloseAddModal={this.handleCloseAddModal}
           addModalIsOpen={this.state.addModalIsOpen}
           handleSubmit={this.handleSubmit}
         />
-        {/* <TrainingResourceList />  <-- this enables the first example redux store-connected component*/}
+        <TrainingResourceListFilters />
+        <button className="add-button" onClick={this.handleAddItem}>Add new</button>
+        <TrainingResourceList />
       </div>
     )
   }

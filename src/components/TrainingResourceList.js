@@ -1,18 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import TrainingResourceItem from './TrainingResourceItem';
+import selectTrainingResources from '../selectors/trainingResources';
 
 const TrainingResourceList = (props) => (
   <div>
-    <p>redux store data... rendered from TrainingResourceList component</p>
-    {props.filters.text}
-    {props.trainingResources.length}
+    {props.trainingResources.map((trainingResource, index) => {
+      return <TrainingResourceItem key={index} {...trainingResource}/>
+    })}
   </div>
 );
 
 const mapStateToProps = (state) => {
   return {
-    trainingResources: state.trainingResources,
-    filters: state.filters
+    trainingResources: selectTrainingResources(state.trainingResources, state.filters)
   };
 };
 
