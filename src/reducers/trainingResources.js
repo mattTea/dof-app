@@ -9,6 +9,8 @@ export default (state = trainingResourcesReducerDefaultState, action) => {
       ];
     case 'REMOVE_ITEM':
       return state.filter(({ id }) => id !== action.id);
+    case 'SET_TRAINING_RESOURCES':
+      return action.trainingResources;
     default:
       return state;
   }

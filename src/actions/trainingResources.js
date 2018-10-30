@@ -29,3 +29,27 @@ export const removeTrainingItem = ({ id } = {}) => ({
   type: 'REMOVE_ITEM',
   id
 });
+
+// SET_TRAINING_RESOURCES
+export const setTrainingResources = (trainingResources) => ({
+  type: 'SET_TRAINING_RESOURCES',
+  trainingResources
+});
+
+// START_SET_TRAINING_RESOURCES
+export const startSetTrainingResources = () => {
+  return (dispatch) => {
+    return database.ref('trainingResources').once('value').then((snapshot) => {
+      const trainingResources = [];
+
+      snapshot.forEach((childSnapshot) => {
+        trainingResources.push({
+          id: childSnapshot.key,
+          ...childSnapshot.val()
+        });
+      });
+
+      dispatch(setTrainingResources(trainingResources));
+    });
+  };
+};
