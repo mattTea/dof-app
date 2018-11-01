@@ -67,6 +67,19 @@ select {
   text-align: right;
 }
 
+.loading {
+  align-items: center;
+  animation: zRotate 2s infinite linear;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+@keyframes zRotate {
+  to {
+    transform: rotateZ(1turn);
+  }
+}
+
 .rate-button {
   background: none;
   border: none;

@@ -24,7 +24,12 @@ const jsx = (
   </Provider>
 );
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+ReactDOM.render(
+  <div className="loading">
+    <img src={require('../public/images/smiley-spinner.png')} style={{maxWidth: "5em", maxHeight: "5em"}}></img>
+  </div>,
+  document.getElementById('app')
+);
 
 store.dispatch(startSetTrainingResources()).then(() => {
   ReactDOM.render(jsx, document.getElementById('app'));
