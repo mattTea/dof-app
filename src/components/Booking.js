@@ -1,6 +1,5 @@
 import React from 'react';
 
-const dofUrl = 'https://sites.google.com/johnlewis.co.uk/deliveringourfuture/';
 const bookUrl = 'https://drive.google.com/drive/folders/1vZV9BzaCvgsqc4LpMXtpffef70wK3i-a?usp=sharing';
 const requestNewCourseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdG3HP6dVllK4oaks5AYsszgw1UIZwtnbY0ohAlqCinYy7iRw/viewform';
 

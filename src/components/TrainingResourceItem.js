@@ -1,5 +1,3 @@
-// Connected version of original TrainingItem.js component
-
 import React from 'react';
 import RatingModal from './RatingModal';
 
