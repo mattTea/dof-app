@@ -10,8 +10,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'eBook',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -24,8 +24,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'eBook',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -38,8 +38,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -52,8 +52,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -66,8 +66,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Video',
   duration: '00:30',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -80,8 +80,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'eBook',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -94,8 +94,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Video',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -108,8 +108,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Article',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -122,8 +122,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Article',
   duration: '00:10',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -136,8 +136,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Article',
   duration: '00:15',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -150,8 +150,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -164,8 +164,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Video',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -178,8 +178,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Podcast',
   duration: '00:30',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -192,8 +192,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Podcast',
   duration: '00:15',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -206,8 +206,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -220,8 +220,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -234,8 +234,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'eBook',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -248,8 +248,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Other',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -262,8 +262,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -276,8 +276,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -290,8 +290,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -299,13 +299,13 @@ database.ref('trainingResources').push({
   stage: 'Individual Choice',
   skill: 'Requirements Engineering',
   title: 'BDD: A how to guide',
-  description: 'Have confidence to organise and successfully facilitate example-driven discovery (or 3-amigo) sessions in your team. Deliver accurately scoped stories, and write acceptance criteria that is easily understood by all members of the team.    How to...  - Run 3-amigos & example driven discovery sessions  - Create readable and testable acceptance criteria  - Know when enough is enough!',
-  url: 'https://docs.google.com/presentation/d/1adm53FJZymVBe_n39ACoj-Lwd4uejHjnHYbczN8m7-o/edit?usp=sharing',
-  deliveryMethod: 'Classroom',
-  format: 'Internal classroom - Book using the sign up sheets: link above in green',
+  description: 'Have confidence to organise and successfully facilitate example-driven discovery (or 3-amigo) sessions in your team. Deliver accurately scoped stories, and write acceptance criteria that is easily understood by all members of the team.    How to...  - Run 3-amigos & example driven discovery sessions  - Create readable and testable acceptance criteria  - Know when enough is enough! Contact Ben Dovey, Sophie Owen or Kris Surtees to join your team and facilitate a session.',
+  url: '',
+  deliveryMethod: 'Self serve',
+  format: 'Real session with your team',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -318,8 +318,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Classroom',
   format: 'Internal classroom - Book using the sign up sheets: link above in green',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -332,8 +332,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Article',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -346,8 +346,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Quick reference card deck. (In the Analysis toolkit cupboard)',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -360,8 +360,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Go-and-watch-a-team.',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -374,8 +374,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -388,8 +388,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -402,8 +402,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Article',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -416,8 +416,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Article',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -430,8 +430,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Article',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -444,8 +444,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Slide',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -458,8 +458,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'PluralSight Course',
   format: 'On-line self service training video.',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -472,8 +472,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Video',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -486,8 +486,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Video',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -500,8 +500,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Video',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -514,8 +514,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Website',
   format: '',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -528,8 +528,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -542,8 +542,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Video',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -556,8 +556,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -570,8 +570,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -584,8 +584,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Video',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -598,8 +598,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -612,8 +612,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Video',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -626,8 +626,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Classroom',
   format: 'Internal classroom - Book using the sign up sheets: link above in green',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -640,8 +640,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Classroom',
   format: 'Internal classroom - Book using the sign up sheets: link above in green',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -654,8 +654,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Classroom',
   format: 'Bespoke classroom course',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -668,8 +668,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Classroom',
   format: 'Internal classroom - Book using the sign up sheets: link above in green',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -682,8 +682,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Classroom',
   format: 'Internal classroom - Book using the sign up sheets: link above in green',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -696,8 +696,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Classroom',
   format: 'Internal classroom - Book using the sign up sheets: link above in green',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -710,8 +710,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -724,8 +724,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -738,8 +738,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'External Community',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -752,8 +752,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -766,8 +766,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -780,8 +780,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Co-ordinated',
   format: 'Public classroom course',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -794,8 +794,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Co-ordinated',
   format: 'Public classroom course',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -808,8 +808,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -822,8 +822,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'eLearning',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -836,8 +836,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'eLearning',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -850,8 +850,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'eLearning',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -864,8 +864,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'eLearning',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -878,8 +878,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'eLearning',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -892,8 +892,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'eLearning',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -906,8 +906,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Video',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -920,8 +920,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Article',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -934,8 +934,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Article',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -948,8 +948,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Video',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -962,8 +962,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Article',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -976,8 +976,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Article',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -990,8 +990,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Article',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1004,8 +1004,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Internal Community',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1018,8 +1018,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Internal Community',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1032,8 +1032,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Internal Community',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1046,8 +1046,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1060,8 +1060,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1074,8 +1074,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1088,8 +1088,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1102,8 +1102,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1116,8 +1116,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'eLearning',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1130,8 +1130,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Blog',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1144,8 +1144,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Thought Leader',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1158,8 +1158,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1172,8 +1172,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1186,8 +1186,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Blog',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1200,8 +1200,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Other',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1214,8 +1214,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1228,8 +1228,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1242,8 +1242,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1256,8 +1256,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1270,8 +1270,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1284,8 +1284,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1298,8 +1298,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1312,8 +1312,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1326,8 +1326,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Article',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1340,8 +1340,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Tutorial',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1354,8 +1354,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Tutorial',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1368,8 +1368,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Tutorial',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1382,8 +1382,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Tutorial',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1396,8 +1396,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1410,8 +1410,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Classroom',
   format: 'Internal classroom - Book using the DoF sign up sheet. Link above in green.',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1424,8 +1424,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Web page',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1438,8 +1438,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Online Course',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1452,8 +1452,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Web page',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1466,8 +1466,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Web page',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1480,8 +1480,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Web page',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1494,8 +1494,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Web page',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1508,8 +1508,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Classroom',
   format: 'Internal classroom - Book using the DoF sign up sheet. Link above in green.',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1522,8 +1522,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Web page',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1536,8 +1536,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Web page',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1550,8 +1550,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Web page',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1564,8 +1564,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Web page',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1578,8 +1578,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1592,8 +1592,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Classroom',
   format: 'Internal classroom - Book using the DoF sign up sheet, link above in green.',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1606,8 +1606,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Video and Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1620,8 +1620,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Video',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1634,8 +1634,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Video',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1648,8 +1648,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Article',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1662,8 +1662,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Webinar',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1676,8 +1676,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Video',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1690,8 +1690,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'eLearning',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1704,8 +1704,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Online Course',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1718,8 +1718,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Classroom-TBA',
   format: 'Facilitator led',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1732,8 +1732,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Classroom-TBA',
   format: 'Facilitator led',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1746,8 +1746,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Classroom-TBA',
   format: 'Facilitator led',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1760,8 +1760,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Web page',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1774,8 +1774,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'eLearning',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1788,8 +1788,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'eLearning',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1802,8 +1802,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1816,8 +1816,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Slides and notes',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1830,8 +1830,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Slides and notes',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1844,8 +1844,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Blog post',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1858,8 +1858,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1872,8 +1872,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Blog post',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1886,8 +1886,8 @@ database.ref('trainingResources').push({
   deliveryMethod: '',
   format: '',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1900,8 +1900,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Podcast',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1914,8 +1914,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1928,8 +1928,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1942,8 +1942,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1956,8 +1956,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1970,8 +1970,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Newsletter',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1984,8 +1984,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'eLearning',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -1998,8 +1998,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2012,8 +2012,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2026,8 +2026,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Blog',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2040,8 +2040,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Podcast',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2054,8 +2054,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Podcast',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2068,8 +2068,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Podcast',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2082,8 +2082,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2096,8 +2096,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2110,8 +2110,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Newsletter',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2124,8 +2124,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Podcast',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2138,8 +2138,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2152,8 +2152,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Community website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2166,8 +2166,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2180,8 +2180,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Website',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2194,8 +2194,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'eLearning',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2208,8 +2208,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2222,8 +2222,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Book',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2236,8 +2236,8 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Article',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
 database.ref('trainingResources').push({
@@ -2250,7 +2250,7 @@ database.ref('trainingResources').push({
   deliveryMethod: 'Self serve',
   format: 'Article',
   duration: '',
-  ratingCount: '',
-  ratingSum: '',
+  ratingCount: 0,
+  ratingSum: 0,
   rating: 4.3
 });
