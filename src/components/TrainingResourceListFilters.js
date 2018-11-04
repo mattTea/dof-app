@@ -2,6 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { setTextFilter, setStageFilter, setDisciplineFilter } from '../actions/filters';
 
+const submitHandler = (e) => {
+  e.preventDefault();
+}
+
 const TrainingResourceListFilters = (props) => (
   <div>
     <div className="filter">
@@ -35,7 +39,7 @@ const TrainingResourceListFilters = (props) => (
         </select>
       </label>
     </div>
-    <form className="filter">
+    <form className="filter" onSubmit={submitHandler}>
       <input
         className="search-field"
         type="text"
