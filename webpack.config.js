@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require('webpack')
+const DefinePlugin = webpack.DefinePlugin
 
 module.exports = (env) => {
   const isProduction = env === 'production';
@@ -32,6 +34,13 @@ module.exports = (env) => {
     devServer: {
       contentBase: path.join(__dirname, 'public'),
       historyApiFallback: true
-    }
+    },
+    plugins: [
+      new DefinePlugin({
+        'process.env': {
+          'NODE_ENV': JSON.stringify(env)
+        }
+      })
+    ]
   };
 };
