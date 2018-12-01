@@ -1,11 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory';
 import Home from '../components/Home';
 import TrainingPage from '../components/TrainingPage';
 import Contact from '../components/Contact';
 import Booking from '../components/Booking';
-import NavHeader from '../components/NavHeader';
+import LoginPage from '../components/Login';
 import imgUrl from '../../public/images/coffee.jpg';
+import PrivateRoute from './PrivateRoute';
+
+export const history = createHistory();
 
 const styles = {
   backgroundImage: `url(${imgUrl})`,
@@ -18,18 +22,18 @@ const styles = {
 };
 
 const AppRouter = () => (
-  <BrowserRouter>
+  <Router history={history}>
     <div style={styles}>
-      <NavHeader />
       <Switch>
-        <Route path="/" component={Home} exact={true} />
-        <Route path="/training" component={TrainingPage} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/booking" component={Booking} />
-        <Route component={Home} />
+        <Route path="/" component={LoginPage} exact={true} />
+        <PrivateRoute path="/home" component={Home} />
+        <PrivateRoute path="/training" component={TrainingPage} />
+        <PrivateRoute path="/contact" component={Contact} />
+        <PrivateRoute path="/booking" component={Booking} />
+        <Route component={TrainingPage} />
       </Switch>
     </div>
-  </BrowserRouter>  
+  </Router>  
 );
 
 export default AppRouter;

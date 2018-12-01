@@ -12,6 +12,7 @@ const config = {
 firebase.initializeApp(config);
 
 const database = firebase.database();
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
 database.ref('trainingResources')
   .once('value')
@@ -26,4 +27,4 @@ database.ref('trainingResources')
     });
   });
 
-export { firebase, database as default };
+export { firebase, googleAuthProvider, database as default };

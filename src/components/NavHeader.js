@@ -1,10 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { startLogout } from '../actions/auth';
 
-const NavHeader = () => (
+export const NavHeader = ({ startLogout }) => (
   <div className="fixed"> 
     <header className="container vertical-align">
-      <NavLink to="/" exact={true}>
+      <NavLink to="/home" exact={true}>
         <img src={require('../../public/images/home.png')} style={{maxWidth: "1.5em", maxHeight: "1.5em", padding: "0 .5em"}}></img>
       </NavLink>
       <NavLink to="/training">
@@ -16,8 +18,13 @@ const NavHeader = () => (
       <NavLink to="/booking">
         <img src={require('../../public/images/book.png')} style={{maxWidth: "1.5em", maxHeight: "1.5em", padding: "0 .5em"}}></img>
       </NavLink>
+      <button onClick={startLogout}>Logout</button>
     </header>
   </div>
 );
 
-export default NavHeader;
+const mapDispatchToProps = (dispatch) => ({
+  startLogout: () => dispatch(startLogout())
+});
+
+export default connect(undefined, mapDispatchToProps)(NavHeader);
