@@ -25,7 +25,7 @@ export default class TrainingPage extends React.Component {
   render() {
     return (
       <div className="container top-padding">
-        <h3>Training resources</h3>
+        <h3>Learning resources</h3>
         <AddModal
           handleCloseAddModal={this.handleCloseAddModal}
           addModalIsOpen={this.state.addModalIsOpen}
