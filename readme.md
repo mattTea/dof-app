@@ -1,7 +1,38 @@
-* yarn run dev-server to run in dev
+## Delivering our Future - learning resources
 
-* yarn run build:dev to build (dev)
+A web app to search, filter and access lean and agile product delivery learning materials. Access it [here](http://dof-learning.herokuapp.com)
 
-* yarn run build:prod to build (production)
 
-* npm run serve to run live-server locally
+## Technologies used
+
+- React
+- Redux
+- Firebase db
+- Firebase auth
+- node.js
+- webpack
+- scss
+- babel
+
+
+## Build and run instructions
+
+#### To run local dev server
+```
+yarn run dev-server
+```
+
+#### To build (dev)
+```
+yarn run build:dev to build (dev)
+```
+
+#### To build (production)
+```
+yarn run build:prod to build (production)
+```
+
+#### To run live-server locally
+```
+yarn run serve
+```
