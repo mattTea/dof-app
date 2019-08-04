@@ -5,7 +5,7 @@ const addTrainingItem = (
   {
     title = '',
     description = '',
-    stage = '',
+    level = '',
     discipline = ''
   } = {}
 ) => ({
@@ -14,7 +14,7 @@ const addTrainingItem = (
     id: uuid(),
     title,
     description,
-    stage,
+    level,
     discipline
   }
 });
@@ -29,9 +29,9 @@ const setTextFilter = (text = '') => ({
   text
 });
 
-const setStageFilter = (stage = '') => ({
-  type: 'SET_STAGE_FILTER',
-  stage
+const setLevelFilter = (level = '') => ({
+  type: 'SET_LEVEL_FILTER',
+  level
 });
 
 const setDisciplineFilter = (discipline = '') => ({
@@ -58,7 +58,7 @@ const trainingResourcesReducer = (state = trainingResourcesReducerDefaultState, 
 
 const filtersReducerDefaultState = {
   text: '',
-  stage: '',
+  level: '',
   discipline: ''
 };
 
@@ -69,10 +69,10 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
         ...state,
         text: action.text
       };
-    case 'SET_STAGE_FILTER':
+    case 'SET_LEVEL_FILTER':
       return {
         ...state,
-        stage: action.stage
+        level: action.level
       };
     case 'SET_DISCIPLINE_FILTER':
       return {
@@ -84,13 +84,13 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
   }
 };
 
-const getVisibleTrainingResources = (trainingResources, { text, stage, discipline }) => {
+const getVisibleTrainingResources = (trainingResources, { text, level, discipline }) => {
   return trainingResources.filter((trainingResource) => {
     const textMatch = JSON.stringify(trainingResource).toLowerCase().includes(text.toLowerCase());
-    const stageMatch = JSON.stringify(trainingResource.stage).toLowerCase().includes(stage.toLowerCase());
+    const levelMatch = JSON.stringify(trainingResource.level).toLowerCase().includes(level.toLowerCase());
     const disciplineMatch = JSON.stringify(trainingResource.discipline).toLowerCase().includes(discipline.toLowerCase());
     
-    return textMatch && stageMatch && disciplineMatch;
+    return textMatch && levelMatch && disciplineMatch;
   });
 };
 
@@ -107,16 +107,16 @@ store.subscribe(() => {
   console.log(visibleTrainingResources);
 });
 
-const trainingItemOne = store.dispatch(addTrainingItem({ title: 'BDD', description: 'Intro to BDD', stage: 'Delivery Fundamentals', discipline: 'Analysis' }));
-const trainingItemTwo = store.dispatch(addTrainingItem({ title: 'BDD_2', description: 'How to BDD', stage: 'Individual Choice', discipline: 'Test' }));
+const trainingItemOne = store.dispatch(addTrainingItem({ title: 'BDD', description: 'Intro to BDD', level: 'Beginner', discipline: 'Analysis' }));
+const trainingItemTwo = store.dispatch(addTrainingItem({ title: 'BDD_2', description: 'How to BDD', level: 'Intermediate', discipline: 'Test' }));
 
 // store.dispatch(removeTrainingItem({ id: trainingItemOne.trainingResource.id }));
 
 // store.dispatch(setTextFilter('how to'));
 // store.dispatch(setTextFilter(''));
 
-store.dispatch(setStageFilter('Delivery Fundamentals'));
-// store.dispatch(setStageFilter(''));
+store.dispatch(setLevelFilter('Delivery Fundamentals'));
+// store.dispatch(setLevelFilter(''));
 
 // store.dispatch(setDisciplineFilter('Analysis'));
 // store.dispatch(setDisciplineFilter(''));
@@ -126,12 +126,12 @@ const demoState = {
     id: 'someId',
     title: 'Course Title',
     description: 'You can learn this stuff!',
-    stage: 'Delivery Fundamentals',
+    level: 'Delivery Fundamentals',
     discipline: 'Analysis'
   }],
   filters: {
     text: '',
-    stage: 'All',
+    level: 'All',
     discipline: 'All'
   }
 }

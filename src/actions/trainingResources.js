@@ -11,10 +11,10 @@ export const startAddTrainingItem = (trainingItemData = {}) => {
     const {
       title = '',
       description = '',
-      stage = '',
+      level = '',
       discipline = ''
     } = trainingItemData;
-    const trainingResource = { title, description, stage, discipline };
+    const trainingResource = { title, description, level, discipline };
 
     database.ref('trainingResources').push(trainingResource).then((ref) => {
       dispatch(addTrainingItem({

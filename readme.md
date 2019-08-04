@@ -17,10 +17,16 @@ A web app to search, filter and access lean and agile product delivery learning 
 
 ## Build and run instructions
 
+To install packages...
+```
+yarn intall
+```
+
 #### To run local dev server
 ```
 yarn run dev-server
 ```
+(Ensure node version 8 is installed)
 
 #### To build (dev)
 ```

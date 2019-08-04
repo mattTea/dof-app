@@ -3,9 +3,9 @@ export const setTextFilter = (text = '') => ({
   text
 });
 
-export const setStageFilter = (stage = '') => ({
-  type: 'SET_STAGE_FILTER',
-  stage
+export const setLevelFilter = (level = '') => ({
+  type: 'SET_LEVEL_FILTER',
+  level
 });
 
 export const setDisciplineFilter = (discipline = '') => ({

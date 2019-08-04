@@ -10,7 +10,7 @@ export default class AddItemForm extends React.Component {
           <input className="form-field" type="text" /><br/>
           <label className="form-label">Description: </label>
           <input className="form-field" type="text" /><br/>
-          <label className="form-label">Stage: </label>
+          <label className="form-label">Level: </label>
           <input className="form-field" type="text" /><br/>
           <label className="form-label">Discipline: </label>
           <input className="form-field" type="text" /><br/>

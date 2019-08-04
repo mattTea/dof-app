@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setTextFilter, setStageFilter, setDisciplineFilter } from '../actions/filters';
+import { setTextFilter, setLevelFilter, setDisciplineFilter } from '../actions/filters';
 
 const submitHandler = (e) => {
   e.preventDefault();
@@ -11,14 +11,14 @@ const TrainingResourceListFilters = (props) => (
     <div className="filter">
       <label>
         <select
-          value={props.filters.stage}
+          value={props.filters.level}
           onChange={(e) => {
-            props.dispatch(setStageFilter(e.target.value));
+            props.dispatch(setLevelFilter(e.target.value));
           }}
         >
-          <option value="">- stage -</option>
-          <option value="Delivery Fundamentals">Delivery Fundamentals</option>
-          <option value="Individual Choice">Individual Choice</option>
+          <option value="">- level -</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
         </select>
       </label>
     </div>

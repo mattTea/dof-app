@@ -15,7 +15,7 @@ const database = firebase.database();
 
 database.ref().set({
   discipline: 'Analysis',
-  stage: 'Delivery Fundamentals',
+  level: 'Delivery Fundamentals',
   skill: 'Requirements Engineering',
   title: 'An intro to Behaviour-driven Development (BDD)',
   description: 'An overview of BDD and its history, from its inception to the use of the scenario-based frameworks that predominate today. It will highlight conversation, questioning and feedback, these are at the heart of BDD. BDD is a framework that helps development teams frame a problem, explore it through conversations, scenarios and concrete examples, and specify system behaviour using natural language. This content will describe the principles of this framework, highlighting the level of importance and weight attributed to different aspects, and provide benefits and examples of its use from an analysis perspective.',

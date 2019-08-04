@@ -19,8 +19,8 @@ module.exports = function (sequelize, DataTypes) {
 		rating: {
 			type: DataTypes.FLOAT
 		},
-		stage: {
-			type: DataTypes.ENUM('Delivery Fundamentals', 'Individual Choice'),
+		level: {
+			type: DataTypes.ENUM('Beginner', 'Intermediate'),
 			allowNull: false
 		},
 		discipline: {

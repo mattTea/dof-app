@@ -14,6 +14,7 @@ firebase.initializeApp(config);
 const database = firebase.database();
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
+// Get the data back from Firebase
 database.ref('trainingResources')
   .once('value')
   .then((snapshot) => {
@@ -26,5 +27,8 @@ database.ref('trainingResources')
       });
     });
   });
+
+// To upload data to Firebase add in here the details saved in "dof-app-data-new.js"
+// yarn run dev-server to run program an upload to firebase
 
 export { firebase, googleAuthProvider, database as default };

@@ -1,3 +1,20 @@
+// new stuff with Ben Price 02.08.19
+
+database.ref('trainingResources').push({
+  discipline: 'Analysis',
+  stage: 'Beginner', // rename to level (this is a filter so be careful!)
+  skill: 'Business Technology Fluency',
+  title: 'Deloitte Review - Tech Fluency',
+  description: "Article giving an overview of what is meant by Technical Fluency, it's important to business and what behaviours would lead to an individual improving their understanding.",
+  url: 'https://www2.deloitte.com/content/dam/insights/us/articles/3877_Tech-fluency/DUP_Tech-fluency-reprint.pdf',
+  deliveryMethod: 'Article', // rename to format
+  // format: 'eBook',
+  duration: 'An Hour or Less', // rename to time
+  ratingCount: 0,
+  ratingSum: 0,
+  rating: 4.3
+})
+
 // data pushed to firebase database 01.11.18
 
 database.ref('trainingResources').push({

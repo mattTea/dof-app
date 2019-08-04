@@ -144,7 +144,7 @@ export default class TrainingItem extends React.Component {
         <button className="rate-button" onClick={this.handleRate}>
           <div className="rating">{this.starRating()}</div>
         </button>
-        <div className="sub-heading">{this.props.stage}: {this.props.discipline}</div>
+        <div className="sub-heading">{this.props.level}: {this.props.discipline}</div>
         <div className="description">{this.props.description}</div>
         <div className="duration">{this.props.deliveryMethod}</div>
         {this.props.duration && 

@@ -1,6 +1,6 @@
 const filtersReducerDefaultState = {
   text: '',
-  stage: '',
+  level: '',
   discipline: ''
 };
 
@@ -11,10 +11,10 @@ export default (state = filtersReducerDefaultState, action) => {
         ...state,
         text: action.text
       };
-    case 'SET_STAGE_FILTER':
+    case 'SET_LEVEL_FILTER':
       return {
         ...state,
-        stage: action.stage
+        level: action.level
       };
     case 'SET_DISCIPLINE_FILTER':
       return {
