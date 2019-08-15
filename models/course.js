@@ -20,7 +20,7 @@ module.exports = function (sequelize, DataTypes) {
 			type: DataTypes.FLOAT
 		},
 		level: {
-			type: DataTypes.ENUM('Beginner', 'Intermediate'),
+			type: DataTypes.ENUM('Beginner', 'Intermediate', 'Expert'),
 			allowNull: false
 		},
 		discipline: {

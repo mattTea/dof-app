@@ -808,7 +808,7 @@ database.ref('trainingResources').push({
 });
 database.ref('trainingResources').push({
   discipline: 'Analysis',
-  level: 'Intermediate',
+  level: 'Expert',
   skill: 'Domain Modelling and Design',
   title: 'DDD and Microservices',
   description: 'A technical article which discussed how to taylor DDD to a microservices architecture, and the impact this has on the domain model.',
@@ -2147,7 +2147,7 @@ database.ref('trainingResources').push({
 });
 database.ref('trainingResources').push({
   discipline: 'Core Skills',
-  level: 'Intermediate',
+  level: 'Expert',
   skill: 'Technical Market Radar',
   title: 'Software Engineering Radio',
   description: 'Software Engineering Radio is a podcast targeted at the professional software developer. The goal is to be a lasting educational resource, not a newscast. Three to four times per month, we publish a new episode talking to experts from the software engineering world about the full range of topics that matter to professional developers.',
@@ -2160,7 +2160,7 @@ database.ref('trainingResources').push({
 });
 database.ref('trainingResources').push({
   discipline: 'Core Skills',
-  level: 'Intermediate',
+  level: 'Expert',
   skill: 'Technical Market Radar',
   title: 'Upgrade Podcast',
   description: 'Upgrade looks at how technology shapes our lives, from the devices in our hands and pockets to the streaming music and video services that keep us entertained.',
